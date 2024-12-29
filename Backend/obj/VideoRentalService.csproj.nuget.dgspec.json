@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Studia\\magisterka\\ZaawansowaneInterfejsyGraficzne\\VideoRentalService\\Backend\\VideoRentalService1.csproj": {}
+    "D:\\Studia\\magisterka\\ZaawansowaneInterfejsyGraficzne\\VideoRentalService\\Backend\\VideoRentalService.csproj": {}
   },
   "projects": {
-    "D:\\Studia\\magisterka\\ZaawansowaneInterfejsyGraficzne\\VideoRentalService\\Backend\\VideoRentalService1.csproj": {
+    "D:\\Studia\\magisterka\\ZaawansowaneInterfejsyGraficzne\\VideoRentalService\\Backend\\VideoRentalService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Studia\\magisterka\\ZaawansowaneInterfejsyGraficzne\\VideoRentalService\\Backend\\VideoRentalService1.csproj",
-        "projectName": "VideoRentalService1",
-        "projectPath": "D:\\Studia\\magisterka\\ZaawansowaneInterfejsyGraficzne\\VideoRentalService\\Backend\\VideoRentalService1.csproj",
+        "projectUniqueName": "D:\\Studia\\magisterka\\ZaawansowaneInterfejsyGraficzne\\VideoRentalService\\Backend\\VideoRentalService.csproj",
+        "projectName": "VideoRentalService",
+        "projectPath": "D:\\Studia\\magisterka\\ZaawansowaneInterfejsyGraficzne\\VideoRentalService\\Backend\\VideoRentalService.csproj",
         "packagesPath": "C:\\Users\\Rhequeste\\.nuget\\packages\\",
         "outputPath": "D:\\Studia\\magisterka\\ZaawansowaneInterfejsyGraficzne\\VideoRentalService\\Backend\\obj\\",
         "projectStyle": "PackageReference",

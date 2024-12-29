@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "++rlLNbRNXYzhjn2+LJ5ZxMzBUQHrhcedOdiOlH/1DM8XII2MNIAHUIMW85KgLXdnC5Pa1cPzP8b1vhXqQydyw==",
+  "dgSpecHash": "Bpj7rz0t+EW+WQtyaTNaz7D3F7UiCIUonD/GX3ldbEdr5PL1yMeWLPtpde6Zj5kG6VZ6UGJIJRIgrPLFm12TGg==",
   "success": true,
-  "projectFilePath": "D:\\Studia\\magisterka\\ZaawansowaneInterfejsyGraficzne\\VideoRentalService1\\VideoRentalService1.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\Studia\\magisterka\\ZaawansowaneInterfejsyGraficzne\\VideoRentalService\\Backend\\VideoRentalService.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Rhequeste\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\Rhequeste\\.nuget\\packages\\microsoft.openapi\\1.6.22\\microsoft.openapi.1.6.22.nupkg.sha512",
+    "C:\\Users\\Rhequeste\\.nuget\\packages\\swashbuckle.aspnetcore\\7.2.0\\swashbuckle.aspnetcore.7.2.0.nupkg.sha512",
+    "C:\\Users\\Rhequeste\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\7.2.0\\swashbuckle.aspnetcore.swagger.7.2.0.nupkg.sha512",
+    "C:\\Users\\Rhequeste\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\7.2.0\\swashbuckle.aspnetcore.swaggergen.7.2.0.nupkg.sha512",
+    "C:\\Users\\Rhequeste\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\7.2.0\\swashbuckle.aspnetcore.swaggerui.7.2.0.nupkg.sha512"
+  ],
   "logs": []
 }

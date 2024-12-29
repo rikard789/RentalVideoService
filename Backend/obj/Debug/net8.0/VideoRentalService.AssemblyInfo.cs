@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("VideoRentalService1")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("VideoRentalService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+776179cd4abc805767abc46ff1af5f2e38cee340")]
-[assembly: System.Reflection.AssemblyProductAttribute("VideoRentalService1")]
-[assembly: System.Reflection.AssemblyTitleAttribute("VideoRentalService1")]
+[assembly: System.Reflection.AssemblyProductAttribute("VideoRentalService")]
+[assembly: System.Reflection.AssemblyTitleAttribute("VideoRentalService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Wygenerowane przez klasę WriteCodeFragment programu MSBuild.
