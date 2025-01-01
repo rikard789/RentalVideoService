@@ -9,12 +9,9 @@ namespace VideoRentalService.Models
         public int RentalId { get; set; }
 
         [ForeignKey("User")]
-        public int UserId { get; set; }
-        public User User { get; set; }
-
-        [ForeignKey("Film")]
-        public int MovieId { get; set; }
-        public Movie Movie { get; set; }
+        public int UserId { get; set; } // Foreign key for User
+        [ForeignKey("Movie")]
+        public int MovieId { get; set; } // Foreign key for Movie
 
         [Required]
         public DateTime RentalDate { get; set; }
@@ -24,5 +21,13 @@ namespace VideoRentalService.Models
         public bool IsDamaged { get; set; }
 
         public decimal? Penalty { get; set; } // isDamaged == true -> how big penalty $ amount
+        public bool? IsPaid { get; set; }
+
+        public DateTime CreationTime { get; set; }
+        public DateTime UpdateTime { get; set; }
+
+        // Navigation properties
+        public User User { get; set; }
+        public Movie Movie { get; set; }
     }
 }
