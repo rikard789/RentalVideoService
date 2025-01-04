@@ -35,164 +35,118 @@
                 <Grid Background="White" Margin="20" Height="100">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="170" />
+                        <ColumnDefinition Width="300" />
+                        <ColumnDefinition Width="310" />
+                        <ColumnDefinition Width="350" />
                     </Grid.ColumnDefinitions>
                     <TextBlock FontSize="32" Margin="20" VerticalAlignment="Center" Grid.Column="0" Text="Movie" Foreground="Black"/>
-                    <TextBlock FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="1" Text="Typ: kaseta VHS" Foreground="Black"/>
-                    <TextBlock FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="2" Text="Data wypożyczenia:" Foreground="Black"  />
-                    <TextBox FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="3" PlaceholderText="np. 04/01/2025"/>
-                    <TextBlock FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="4" Text="Data oddania:" Foreground="Black"  />
-                    <TextBox FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="5" PlaceholderText="np. 04/05/2025"/>
-                    <Button FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="6" Background="CornflowerBlue" Content="Wypożycz" Width="150" Height="50"/>
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="1" Text="Typ: film online" Foreground="Black"/>
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="2" Text="Data wypożyczenia: 30/12/2024" Foreground="Black"  />
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="3" Text="Koniec wypożyczenia: 07/02/2024" Foreground="Black"  />
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="5" Text="Kod: 7832YR2HR" Foreground="Black"  />
                 </Grid>
                 <Grid Background="White" Margin="20" Height="100">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="170" />
+                        <ColumnDefinition Width="300" />
+                        <ColumnDefinition Width="250" />
+                        <ColumnDefinition Width="250" />
+                        <ColumnDefinition Width="160" />
                     </Grid.ColumnDefinitions>
                     <TextBlock FontSize="32" Margin="20" VerticalAlignment="Center" Grid.Column="0" Text="Movie" Foreground="Black"/>
-                    <TextBlock FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="1" Text="Typ: płyta DVD" Foreground="Black"/>
-                    <TextBlock FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="2" Text="Data wypożyczenia:" Foreground="Black"  />
-                    <TextBox FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="3" PlaceholderText="np. 04/01/2025"/>
-                    <TextBlock FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="4" Text="Data oddania:" Foreground="Black"  />
-                    <TextBox FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="5" PlaceholderText="np. 04/05/2025"/>
-                    <Button FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="6" Background="CornflowerBlue" Content="Wypożycz" Width="150" Height="50"/>
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="1" Text="Typ: kaseta VHS" Foreground="Black"/>
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="2" Text="Data wypożyczenia: 10/04/2024" Foreground="Black"  />
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="3" Text="Termin zwrotu: 15/06/2024" Foreground="Black"  />
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="4" Text="Data oddania: 21/06/2024" Foreground="Black"  />
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="5" Text="Kara: 4.99 PLN" Foreground="Black"  />
                 </Grid>
                 <Grid Background="White" Margin="20" Height="100">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="170" />
+                        <ColumnDefinition Width="300" />
+                        <ColumnDefinition Width="250" />
+                        <ColumnDefinition Width="250" />
+                        <ColumnDefinition Width="160" />
                     </Grid.ColumnDefinitions>
                     <TextBlock FontSize="32" Margin="20" VerticalAlignment="Center" Grid.Column="0" Text="Movie" Foreground="Black"/>
-                    <TextBlock FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="1" Text="Typ: płyta DVD" Foreground="Black"/>
-                    <TextBlock FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="2" Text="Data wypożyczenia:" Foreground="Black"  />
-                    <TextBox FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="3" PlaceholderText="np. 04/01/2025"/>
-                    <TextBlock FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="4" Text="Data oddania:" Foreground="Black"  />
-                    <TextBox FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="5" PlaceholderText="np. 04/05/2025"/>
-                    <Button FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="6" Background="CornflowerBlue" Content="Wypożycz" Width="150" Height="50"/>
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="1" Text="Typ: płyta DVD" Foreground="Black"/>
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="2" Text="Data wypożyczenia: 07/03/2024" Foreground="Black"  />
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="3" Text="Termin zwrotu: 12/05/2024" Foreground="Black"  />
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="4" Text="Data oddania: 5/05/2024" Foreground="Black"  />
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="5" Text="Kara: brak" Foreground="Black"  />
                 </Grid>
                 <Grid Background="White" Margin="20" Height="100">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="170" />
+                        <ColumnDefinition Width="300" />
+                        <ColumnDefinition Width="310" />
+                        <ColumnDefinition Width="350" />
                     </Grid.ColumnDefinitions>
                     <TextBlock FontSize="32" Margin="20" VerticalAlignment="Center" Grid.Column="0" Text="Movie" Foreground="Black"/>
-                    <TextBlock FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="1" Text="Typ: płyta DVD" Foreground="Black"/>
-                    <TextBlock FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="2" Text="Data wypożyczenia:" Foreground="Black"  />
-                    <TextBox FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="3" PlaceholderText="np. 04/01/2025"/>
-                    <TextBlock FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="4" Text="Data oddania:" Foreground="Black"  />
-                    <TextBox FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="5" PlaceholderText="np. 04/05/2025"/>
-                    <Button FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="6" Background="CornflowerBlue" Content="Wypożycz" Width="150" Height="50"/>
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="1" Text="Typ: film online" Foreground="Black"/>
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="2" Text="Data wypożyczenia: 10/02/2024" Foreground="Black"  />
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="3" Text="Koniec wypożyczenia: 11/03/2024" Foreground="Black"  />
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="5" Text="Kod: wygasł" Foreground="Black"  />
                 </Grid>
                 <Grid Background="White" Margin="20" Height="100">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="170" />
+                        <ColumnDefinition Width="300" />
+                        <ColumnDefinition Width="310" />
+                        <ColumnDefinition Width="350" />
                     </Grid.ColumnDefinitions>
                     <TextBlock FontSize="32" Margin="20" VerticalAlignment="Center" Grid.Column="0" Text="Movie" Foreground="Black"/>
-                    <TextBlock FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="1" Text="Typ: płyta DVD" Foreground="Black"/>
-                    <TextBlock FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="2" Text="Data wypożyczenia:" Foreground="Black"  />
-                    <TextBox FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="3" PlaceholderText="np. 04/01/2025"/>
-                    <TextBlock FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="4" Text="Data oddania:" Foreground="Black"  />
-                    <TextBox FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="5" PlaceholderText="np. 04/05/2025"/>
-                    <Button FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="6" Background="CornflowerBlue" Content="Wypożycz" Width="150" Height="50"/>
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="1" Text="Typ: film online" Foreground="Black"/>
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="2" Text="Data wypożyczenia: 10/02/2024" Foreground="Black"  />
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="3" Text="Koniec wypożyczenia: 11/03/2024" Foreground="Black"  />
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="5" Text="Kod: wygasł" Foreground="Black"  />
                 </Grid>
                 <Grid Background="White" Margin="20" Height="100">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="170" />
+                        <ColumnDefinition Width="300" />
+                        <ColumnDefinition Width="310" />
+                        <ColumnDefinition Width="350" />
                     </Grid.ColumnDefinitions>
                     <TextBlock FontSize="32" Margin="20" VerticalAlignment="Center" Grid.Column="0" Text="Movie" Foreground="Black"/>
-                    <TextBlock FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="1" Text="Typ: płyta DVD" Foreground="Black"/>
-                    <TextBlock FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="2" Text="Data wypożyczenia:" Foreground="Black"  />
-                    <TextBox FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="3" PlaceholderText="np. 04/01/2025"/>
-                    <TextBlock FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="4" Text="Data oddania:" Foreground="Black"  />
-                    <TextBox FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="5" PlaceholderText="np. 04/05/2025"/>
-                    <Button FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="6" Background="CornflowerBlue" Content="Wypożycz" Width="150" Height="50"/>
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="1" Text="Typ: film online" Foreground="Black"/>
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="2" Text="Data wypożyczenia: 10/02/2024" Foreground="Black"  />
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="3" Text="Koniec wypożyczenia: 11/03/2024" Foreground="Black"  />
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="5" Text="Kod: wygasł" Foreground="Black"  />
                 </Grid>
                 <Grid Background="White" Margin="20" Height="100">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="170" />
+                        <ColumnDefinition Width="300" />
+                        <ColumnDefinition Width="310" />
+                        <ColumnDefinition Width="350" />
                     </Grid.ColumnDefinitions>
                     <TextBlock FontSize="32" Margin="20" VerticalAlignment="Center" Grid.Column="0" Text="Movie" Foreground="Black"/>
-                    <TextBlock FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="1" Text="Typ: płyta DVD" Foreground="Black"/>
-                    <TextBlock FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="2" Text="Data wypożyczenia:" Foreground="Black"  />
-                    <TextBox FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="3" PlaceholderText="np. 04/01/2025"/>
-                    <TextBlock FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="4" Text="Data oddania:" Foreground="Black"  />
-                    <TextBox FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="5" PlaceholderText="np. 04/05/2025"/>
-                    <Button FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="6" Background="CornflowerBlue" Content="Wypożycz" Width="150" Height="50"/>
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="1" Text="Typ: film online" Foreground="Black"/>
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="2" Text="Data wypożyczenia: 10/02/2024" Foreground="Black"  />
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="3" Text="Koniec wypożyczenia: 11/03/2024" Foreground="Black"  />
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="5" Text="Kod: wygasł" Foreground="Black"  />
                 </Grid>
                 <Grid Background="White" Margin="20" Height="100">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="170" />
+                        <ColumnDefinition Width="300" />
+                        <ColumnDefinition Width="310" />
+                        <ColumnDefinition Width="350" />
                     </Grid.ColumnDefinitions>
                     <TextBlock FontSize="32" Margin="20" VerticalAlignment="Center" Grid.Column="0" Text="Movie" Foreground="Black"/>
-                    <TextBlock FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="1" Text="Typ: płyta DVD" Foreground="Black"/>
-                    <TextBlock FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="2" Text="Data wypożyczenia:" Foreground="Black"  />
-                    <TextBox FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="3" PlaceholderText="np. 04/01/2025"/>
-                    <TextBlock FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="4" Text="Data oddania:" Foreground="Black"  />
-                    <TextBox FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="5" PlaceholderText="np. 04/05/2025"/>
-                    <Button FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="6" Background="CornflowerBlue" Content="Wypożycz" Width="150" Height="50"/>
-                </Grid>
-                <Grid Background="White" Margin="20" Height="100">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                    </Grid.ColumnDefinitions>
-                    <TextBlock FontSize="32" Margin="20" VerticalAlignment="Center" Grid.Column="0" Text="Movie" Foreground="Black"/>
-                    <TextBlock FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="1" Text="Typ: płyta DVD" Foreground="Black"/>
-                    <TextBlock FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="2" Text="Data wypożyczenia:" Foreground="Black"  />
-                    <TextBox FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="3" PlaceholderText="np. 04/01/2025"/>
-                    <TextBlock FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="4" Text="Data oddania:" Foreground="Black"  />
-                    <TextBox FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="5" PlaceholderText="np. 04/05/2025"/>
-                    <Button FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="6" Background="CornflowerBlue" Content="Wypożycz" Width="150" Height="50"/>
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="1" Text="Typ: film online" Foreground="Black"/>
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="2" Text="Data wypożyczenia: 10/02/2024" Foreground="Black"  />
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="3" Text="Koniec wypożyczenia: 11/03/2024" Foreground="Black"  />
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="5" Text="Kod: wygasł" Foreground="Black"  />
                 </Grid>
             </StackPanel>
         </ScrollViewer>
