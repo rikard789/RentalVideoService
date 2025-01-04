@@ -26,5 +26,14 @@ namespace Frontend
         {
             this.InitializeComponent();
         }
+        private void OnSignInClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(UserRentalHistoryPage));
+        }
+
+        private void OnLogInClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(LogInPage));
+        }
     }
 }

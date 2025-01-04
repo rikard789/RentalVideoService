@@ -10,22 +10,22 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>addb9316-e866-442a-ac2a-a2f85785e501</PackageIdentityName>
     <PackageIdentityPublisher>CN=Mateusz</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\obj\x64\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Mateusz\Source\Repos\RentalVideoService2\Frontend\obj\x64\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\bin\x64\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\Mateusz\Source\Repos\RentalVideoService2\Frontend\bin\x64\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\bin\x64\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Mateusz\Source\Repos\RentalVideoService2\Frontend\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\bin\x64\Debug\Frontend.exe">
+    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService2\Frontend\bin\x64\Debug\Frontend.exe">
       <PackagePath>entrypoint\Frontend.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.14\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
@@ -34,73 +34,70 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService2\Frontend\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService2\Frontend\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService2\Frontend\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService2\Frontend\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService2\Frontend\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService2\Frontend\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService2\Frontend\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\bin\x64\Debug\Frontend.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService2\Frontend\bin\x64\Debug\Frontend.xr.xml">
       <PackagePath>Frontend.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\bin\x64\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService2\Frontend\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\bin\x64\Debug\EmployeeProductHandlingPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService2\Frontend\bin\x64\Debug\EmployeeProductHandlingPage.xbf">
       <PackagePath>EmployeeProductHandlingPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\bin\x64\Debug\EmployeeProductIntroductionPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService2\Frontend\bin\x64\Debug\EmployeeProductIntroductionPage.xbf">
       <PackagePath>EmployeeProductIntroductionPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\bin\x64\Debug\LogInPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService2\Frontend\bin\x64\Debug\LogInPage.xbf">
       <PackagePath>LogInPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\bin\x64\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService2\Frontend\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\bin\x64\Debug\SignInPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService2\Frontend\bin\x64\Debug\SignInPage.xbf">
       <PackagePath>SignInPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\bin\x64\Debug\UserDigitalRentalPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService2\Frontend\bin\x64\Debug\UserDigitalRentalPage.xbf">
       <PackagePath>UserDigitalRentalPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\bin\x64\Debug\UserPhysicalRentalPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService2\Frontend\bin\x64\Debug\UserPhysicalRentalPage.xbf">
       <PackagePath>UserPhysicalRentalPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\bin\x64\Debug\UserRentalHistoryPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService2\Frontend\bin\x64\Debug\UserRentalHistoryPage.xbf">
       <PackagePath>UserRentalHistoryPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\bin\x64\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService2\Frontend\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\bin\x64\Debug\Core\Frontend.exe">
+    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService2\Frontend\bin\x64\Debug\Core\Frontend.exe">
       <PackagePath>Frontend.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
