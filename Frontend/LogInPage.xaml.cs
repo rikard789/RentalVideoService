@@ -28,13 +28,10 @@ namespace Frontend
         }
         private void OnLogInClick(object sender, RoutedEventArgs e)
         {
-            // Navigate to SignInPage
             this.Frame.Navigate(typeof(UserRentalHistoryPage));
         }
-
         private void OnSignInClick(object sender, RoutedEventArgs e)
         {
-            // Navigate to RegisterPage (if you have one)
             this.Frame.Navigate(typeof(SignInPage));
         }
     }

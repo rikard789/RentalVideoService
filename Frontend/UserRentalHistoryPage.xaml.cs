@@ -31,5 +31,13 @@ namespace Frontend
         {
             this.Frame.Navigate(typeof(UserPhysicalRentalPage));
         }
+        private void OnRentOnlineClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(UserDigitalRentalPage));
+        }
+        private void OnLogOutClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(LogInPage));
+        }
     }
 }

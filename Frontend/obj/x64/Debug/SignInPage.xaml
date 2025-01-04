@@ -26,10 +26,13 @@
                     <TextBox PlaceholderText="np. User1" Width="300" Height="40" Margin="0,10,0,20" HorizontalAlignment="Center"/>
                     <TextBlock Text="Hasło użytkownika:" Foreground="Black" HorizontalAlignment="Center" Margin="0,20,0,10"/>
                     <TextBox PlaceholderText="np. abc" Width="300" Height="40" Margin="0,10,0,20" HorizontalAlignment="Center"/>
-                    <TextBlock Text="Imię użytkownika:" Foreground="Black" HorizontalAlignment="Center" Margin="0,20,0,10"/>
+                    <TextBlock Text="Imię i nazwisko użytkownika:" Foreground="Black" HorizontalAlignment="Center" Margin="0,20,0,10"/>
                     <TextBox PlaceholderText="np. Jan" Width="300" Height="40" Margin="0,10,0,20" HorizontalAlignment="Center"/>
-                    <TextBlock Text="Nazwisko użytkownika:" Foreground="Black" HorizontalAlignment="Center" Margin="0,20,0,10"/>
-                    <TextBox PlaceholderText="np. Kowalski" Width="300" Height="40" Margin="0,10,0,20" HorizontalAlignment="Center"/>
+                    <TextBlock Text="Rodzaj użytkownika:" Foreground="Black" HorizontalAlignment="Center" Margin="0,20,0,10"/>
+                    <ComboBox Width="300" Height="40" Margin="0,10,0,20" HorizontalAlignment="Center">
+                        <ComboBoxItem Content="Użytkownik" />
+                        <ComboBoxItem Content="Pracownik" />
+                    </ComboBox>
                 </StackPanel>
                 <StackPanel Grid.Column="1">
                     <TextBlock Text="Adres e-mail użytkownika:" Foreground="Black" HorizontalAlignment="Center" Margin="0,20,0,10"/>

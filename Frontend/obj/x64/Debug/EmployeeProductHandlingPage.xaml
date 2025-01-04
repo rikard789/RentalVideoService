@@ -22,8 +22,8 @@
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
             <TextBlock Grid.Column="0" Margin="30" FontSize="32" VerticalAlignment="Center">Wypożyczalnia filmów wideo</TextBlock>
-            <Button Grid.Column="1" Content="Dodaj produkt" Width="200" Height="40" Margin="10" />
-            <Button Grid.Column="4" Content="Wyloguj się" Width="100" Height="40" Margin="10" />
+            <Button x:ConnectionId='2'                           Grid.Column="1" Content="Dodaj produkt" Width="200" Height="40" Margin="10" />
+            <Button x:ConnectionId='3'                       Grid.Column="4" Content="Wyloguj się" Width="100" Height="40" Margin="10" />
         </Grid>
         <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled">
             <StackPanel>

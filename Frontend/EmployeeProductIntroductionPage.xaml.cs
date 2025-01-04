@@ -26,5 +26,13 @@ namespace Frontend
         {
             this.InitializeComponent();
         }
+        private void OnHandlingProductsClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(EmployeeProductHandlingPage));
+        }
+        private void OnLogOutClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(LogInPage));
+        }
     }
 }
