@@ -6,7 +6,13 @@ Used for project:
  - .NET 8.0
  - Swashbuckle.AspNetCore 7.2.0
 
-
+Before running project:
+1. Create database -> got to folder Database and run:
+```
+docker-compose up
+```
+to create mssql database
+2. Run migrations to database and add test data 
 
 How to run database migrations(create database and load test data):
 1. Open project and go to Backend in powershell terminal
