@@ -80,18 +80,21 @@ namespace VideoRentalService.DBContext
                 {
                     MovieId = 1,
                     Title = "The Shawshank Redemption",
+                    Genres = "Drama",
                     Type = "DVD"
                 },
                 new Movie
                 {
                     MovieId = 2,
                     Title = "The Godfather",
+                    Genres = "Crime, Drama",
                     Type = "Blu-ray"
                 },
                 new Movie
                 {
                     MovieId = 3,
                     Title = "Inception",
+                    Genres = "Science Fiction, Action, Thriller",
                     Type = "Digital"
                 }
             );

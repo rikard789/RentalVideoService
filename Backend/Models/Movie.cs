@@ -11,8 +11,11 @@ namespace VideoRentalService.Models
         public string Title { get; set; }
 
         [Required]
-        public string Type { get; set; } // 'DVD' or 'Electronic'
+        public string Genres { get; set; }
 
+        [Required]
+        public string Type { get; set; } // 'DVD' or 'Electronic'
+        public string Image { get; set; } 
         public DateTime CreationTime { get; set; }
         public DateTime UpdateTime { get; set; }
 
