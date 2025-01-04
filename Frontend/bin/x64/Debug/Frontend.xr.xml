@@ -27,6 +27,7 @@
       <RootProperty Name="VerticalScrollBarVisibility" />
       <RootProperty Name="HorizontalScrollBarVisibility" />
       <RootProperty Name="Content" />
+      <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Children" />
@@ -68,9 +69,6 @@
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Frontend.EmployeeProductHandlingPage" />
-    <RootType FullName="Frontend.EmployeeProductIntroductionPage" />
-    <RootType FullName="Frontend.LogInPage" />
-    <RootType FullName="Frontend.MainPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
@@ -81,6 +79,9 @@
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBoxItem">
       <RootProperty Name="Content" />
     </RootType>
+    <RootType FullName="Frontend.EmployeeProductIntroductionPage" />
+    <RootType FullName="Frontend.LogInPage" />
+    <RootType FullName="Frontend.MainPage" />
     <RootType FullName="Frontend.SignInPage" />
     <RootType FullName="Frontend.UserDigitalRentalPage" />
     <RootType FullName="Frontend.UserPhysicalRentalPage" />

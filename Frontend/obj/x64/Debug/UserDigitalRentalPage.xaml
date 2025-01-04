@@ -11,6 +11,7 @@
     <Grid Background="DarkGray">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid Background="CornflowerBlue" Height="100" VerticalAlignment="Top">
@@ -26,7 +27,10 @@
             <Button x:ConnectionId='3'                              Grid.Column="3" Content="Historia wypożyczeń" Width="200" Height="40" Margin="10" />
             <Button x:ConnectionId='4'                       Grid.Column="4" Content="Wyloguj się" Width="100" Height="40" Margin="10" />
         </Grid>
-        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled">
+        <Grid Grid.Row="1" Background="White" Height="75" VerticalAlignment="Top">
+            <TextBlock Foreground="Black" Grid.Column="0" Margin="30,0,0,0" FontSize="24" VerticalAlignment="Center">Wypożycz online</TextBlock>
+        </Grid>
+        <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled">
             <StackPanel>
                 <Grid Background="White" Margin="20" Height="100">
                     <Grid.ColumnDefinitions>

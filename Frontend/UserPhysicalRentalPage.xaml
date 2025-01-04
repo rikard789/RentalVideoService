@@ -11,9 +11,10 @@
     <Grid Background="DarkGray">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Grid Background="CornflowerBlue" Height="100" VerticalAlignment="Top">
+        <Grid Grid.Row="0" Background="CornflowerBlue" Height="100" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="Auto" />
@@ -26,7 +27,10 @@
             <Button Click="OnRentalHistoryClick" Grid.Column="3" Content="Historia wypożyczeń" Width="200" Height="40" Margin="10" />
             <Button Click="OnLogOutClick" Grid.Column="4" Content="Wyloguj się" Width="100" Height="40" Margin="10" />
         </Grid>
-        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled">
+        <Grid Grid.Row="1" Background="White" Height="75" VerticalAlignment="Top">
+            <TextBlock Foreground="Black" Grid.Column="0" Margin="30,0,0,0" FontSize="24" VerticalAlignment="Center">Wypożycz DVD/kasetę</TextBlock>
+        </Grid>
+        <ScrollViewer VerticalAlignment="Top" Grid.Row="2" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled">
             <StackPanel>
                 <Grid Background="White" Margin="20" Height="100">
                     <Grid.ColumnDefinitions>
