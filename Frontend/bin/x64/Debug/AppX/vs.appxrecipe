@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-01-04T09:51:30.144</Modified>
+      <Modified>2025-01-04T11:14:52.459</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\bin\x64\Debug\Frontend.exe">
       <PackagePath>entrypoint\Frontend.exe</PackagePath>
-      <Modified>2025-01-04T09:51:26.788</Modified>
+      <Modified>2025-01-04T11:14:51.726</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.14\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -86,15 +86,43 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\bin\x64\Debug\Frontend.xr.xml">
       <PackagePath>Frontend.xr.xml</PackagePath>
-      <Modified>2025-01-04T09:51:26.541</Modified>
+      <Modified>2025-01-04T11:11:37.006</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2025-01-04T09:51:26.600</Modified>
+      <Modified>2025-01-04T11:14:51.561</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\bin\x64\Debug\EmployeeProductHandlingPage.xbf">
+      <PackagePath>EmployeeProductHandlingPage.xbf</PackagePath>
+      <Modified>2025-01-04T11:14:51.562</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\bin\x64\Debug\EmployeeProductIntroductionPage.xbf">
+      <PackagePath>EmployeeProductIntroductionPage.xbf</PackagePath>
+      <Modified>2025-01-04T11:14:51.562</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\bin\x64\Debug\LogInPage.xbf">
+      <PackagePath>LogInPage.xbf</PackagePath>
+      <Modified>2025-01-04T11:14:51.562</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2025-01-04T09:51:26.600</Modified>
+      <Modified>2025-01-04T11:14:51.562</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\bin\x64\Debug\SignInPage.xbf">
+      <PackagePath>SignInPage.xbf</PackagePath>
+      <Modified>2025-01-04T11:14:51.563</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\bin\x64\Debug\UserDigitalRentalPage.xbf">
+      <PackagePath>UserDigitalRentalPage.xbf</PackagePath>
+      <Modified>2025-01-04T11:14:51.563</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\bin\x64\Debug\UserPhysicalRentalPage.xbf">
+      <PackagePath>UserPhysicalRentalPage.xbf</PackagePath>
+      <Modified>2025-01-04T11:14:51.563</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\bin\x64\Debug\UserRentalHistoryPage.xbf">
+      <PackagePath>UserRentalHistoryPage.xbf</PackagePath>
+      <Modified>2025-01-04T11:14:51.564</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -102,11 +130,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-01-04T09:51:27.567</Modified>
+      <Modified>2025-01-04T11:11:37.818</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\bin\x64\Debug\Core\Frontend.exe">
       <PackagePath>Frontend.exe</PackagePath>
-      <Modified>2025-01-04T09:51:30.136</Modified>
+      <Modified>2025-01-04T11:14:52.451</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
