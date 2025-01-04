@@ -70,8 +70,29 @@
     <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\bin\x64\Debug\EmployeeProductHandlingPage.xbf">
+      <PackagePath>EmployeeProductHandlingPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\bin\x64\Debug\EmployeeProductIntroductionPage.xbf">
+      <PackagePath>EmployeeProductIntroductionPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\bin\x64\Debug\LogInPage.xbf">
+      <PackagePath>LogInPage.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\bin\x64\Debug\SignInPage.xbf">
+      <PackagePath>SignInPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\bin\x64\Debug\UserDigitalRentalPage.xbf">
+      <PackagePath>UserDigitalRentalPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\bin\x64\Debug\UserPhysicalRentalPage.xbf">
+      <PackagePath>UserPhysicalRentalPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Mateusz\Source\Repos\RentalVideoService\Frontend\bin\x64\Debug\UserRentalHistoryPage.xbf">
+      <PackagePath>UserRentalHistoryPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
