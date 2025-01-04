@@ -5,3 +5,5 @@
 /.vs
 /Frontend/Properties
 /Backend/.vs
+/Backend/obj/Debug/net8.0
+/.gitignore
