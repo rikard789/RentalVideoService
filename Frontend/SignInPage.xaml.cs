@@ -28,7 +28,7 @@ namespace Frontend
         }
         private void OnSignInClick(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(UserRentalHistoryPage));
+            this.Frame.Navigate(typeof(EmployeeProductHandlingPage));
         }
 
         private void OnLogInClick(object sender, RoutedEventArgs e)

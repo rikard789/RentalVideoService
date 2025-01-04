@@ -26,5 +26,10 @@ namespace Frontend
         {
             this.InitializeComponent();
         }
+
+        private void OnRentPhysicalClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(UserPhysicalRentalPage));
+        }
     }
 }

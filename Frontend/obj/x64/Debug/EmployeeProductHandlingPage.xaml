@@ -8,8 +8,39 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-
+    <Grid Background="DarkGray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="CornflowerBlue" Height="100" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Margin="30" FontSize="32" VerticalAlignment="Center">Wypożyczalnia filmów wideo</TextBlock>
+            <Button Grid.Column="1" Content="Dodaj produkt" Width="200" Height="40" Margin="10" />
+            <Button Grid.Column="4" Content="Wyloguj się" Width="100" Height="40" Margin="10" />
+        </Grid>
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled">
+            <StackPanel>
+                <Grid Background="White" Margin="20" Height="200">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock FontSize="32" Margin="20" VerticalAlignment="Center" Grid.Column="0" Text="Movie" Foreground="Black"/>
+                    <TextBlock FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="1" Text="Nazwa użytkownika:" Foreground="Black"  />
+                    <TextBox FontSize="24" Margin="20" VerticalAlignment="Center" Grid.Column="2" PlaceholderText="np. User1"/>
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>
 
