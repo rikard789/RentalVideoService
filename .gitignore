@@ -2,17 +2,13 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
+/.vs/RentalVideoService1/v17
+/.vs
+/Backend/.vs/VideoRentalService1
+/Backend/src
+/Backend/test
+/Frontend/obj/x64/Debug
 /Backend/obj/Debug/net8.0/VideoRentalService1.AssemblyInfo.cs
 /Backend/obj/Debug/net8.0/VideoRentalService1.AssemblyInfoInputs.cache
 /Backend/obj/Debug/net8.0/VideoRentalService1.assets.cache
 /Backend/obj/Debug/net8.0/VideoRentalService1.GeneratedMSBuildEditorConfig.editorconfig
-/.vs
-/Backend/.vs
-/Backend/src/.vs
-/Backend/src/bin/Debug/net8.0
-/Backend/src/obj
-/Backend/src/Pages
-/Backend/test/bin/Debug/net8.0
-/Backend/test/obj/Debug/net8.0
-/Backend/test/obj
-/Frontend/obj/x64/Debug
