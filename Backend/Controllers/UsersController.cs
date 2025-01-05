@@ -16,7 +16,7 @@ namespace VideoRentalService.Controllers
         }
 
         // List all users
-        [HttpGet]
+        [HttpGet("allUsers")]
         public async Task<ActionResult<List<User>>> GetAllUsers()
         {
             var users = await _userService.GetAllUsersAsync();
@@ -24,7 +24,7 @@ namespace VideoRentalService.Controllers
         }
 
         // Get user by ID
-        [HttpGet("{id}")]
+        [HttpGet("getUser/{id}")]
         public async Task<ActionResult<User>> GetUserById(int id)
         {
             var user = await _userService.GetUserByIdAsync(id);
@@ -34,7 +34,7 @@ namespace VideoRentalService.Controllers
         }
 
         // Get user by Username
-        [HttpGet]
+        [HttpGet("getUserUsername/{username}")]
         public async Task<ActionResult<List<User>>> GetUserByUsername(string username)
         {
             var user = await _userService.FindUsersByUsernameAsync(username);
@@ -44,7 +44,7 @@ namespace VideoRentalService.Controllers
         }
 
         // Create a new user
-        [HttpPost]
+        [HttpPost("createUser")]
         public async Task<ActionResult<User>> CreateUser(User user)
         {
             var newUser = await _userService.AddUserAsync(user);
@@ -52,7 +52,7 @@ namespace VideoRentalService.Controllers
         }
 
         // Update an existing user by id
-        [HttpPut("{id}")]
+        [HttpPut("updateUser/{id}")]
         public async Task<ActionResult<User>> UpdateUser(int id, User updatedUser)
         {
             var user = await _userService.UpdateUserAsync(id, updatedUser);
@@ -62,7 +62,7 @@ namespace VideoRentalService.Controllers
         }
 
         // Delete a user by id
-        [HttpDelete("{id}")]
+        [HttpDelete("deleteUser/{id}")]
         public async Task<ActionResult> DeleteUser(int id)
         {
             var success = await _userService.DeleteUserAsync(id);

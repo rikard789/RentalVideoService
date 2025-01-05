@@ -16,14 +16,14 @@ namespace VideoRentalService.Controllers
         }
 
         // Get all rentals for user
-        [HttpGet]
+        [HttpGet("allRentals")]
         public async Task<ActionResult<List<Rental>>> GetAllRentalsForUser(int userId)
         {
             return await _rentalService.GetRentalsForUserAsync(userId);
         }
 
         //Add movie to rental
-        [HttpPost]
+        [HttpPost("addMovie")]
         public async Task<ActionResult> AddMovieToRental(int userId, int movieId)
         {
             await _rentalService.AddRentalMovieAsync(userId, movieId);
@@ -31,7 +31,7 @@ namespace VideoRentalService.Controllers
         }
 
         // Set rental penalty for damaged movie
-        [HttpPost]
+        [HttpPost("set-penalty")]
         public async Task<ActionResult> SetRentalPenalty(int rentalId, bool isDamaged, decimal penalty)
         {
             await _rentalService.SetPenaltyForDamagedMovieAsync(rentalId, isDamaged, penalty);

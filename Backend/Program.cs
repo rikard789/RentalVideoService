@@ -17,10 +17,7 @@ namespace VideoRentalService1
 
             // Add services to the container.
             //builder.Services.AddRazorPages();
-            builder.Services.AddControllers();
-            builder.Services.AddScoped<MovieService>();
-            builder.Services.AddScoped<UserService>();
-            builder.Services.AddScoped<RentalService>();
+            
 
             // Add Swagger/OpenAPI
             builder.Services.AddEndpointsApiExplorer();
@@ -30,6 +27,11 @@ namespace VideoRentalService1
 
             });
 
+            builder.Services.AddControllers();
+            //builder.Services.AddScoped<MovieService>();
+            //builder.Services.AddScoped<UserService>();
+            //builder.Services.AddScoped<RentalService>();
+
             builder.Services.AddDbContext<VideoRentalServiceContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
@@ -38,29 +40,24 @@ namespace VideoRentalService1
             Console.WriteLine($"Environment: {app.Environment.EnvironmentName}");
 
             // Configure the HTTP request pipeline.
-            if (!app.Environment.IsDevelopment() || !app.Environment.IsDevelopment())
-                {
-                //app.UseExceptionHandler("/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                //app.UseHsts();
-
-                app.UseSwagger();
-                app.UseSwaggerUI(options =>
-                {
-                    options.SwaggerEndpoint("/swagger/v1/swagger.json", "VideoR");
-                    //options.SwaggerEndpoint("/swagger/v1/swagger.json", "Video Rental API v1");
-                    //c.RoutePrefix = string.Empty; // To make Swagger available at root URL (optional)
-                });
+            if (!app.Environment.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
             }
 
+            app.UseSwagger();
+            app.UseSwaggerUI(options =>
+            {
+                options.SwaggerEndpoint("../swagger/v1/swagger.json", "VideoR");
+                options.SwaggerEndpoint("/swagger/v1/swagger.json", "Video Rental API v1");
+            });
+
+
             app.UseHttpsRedirection();
-            //app.UseStaticFiles();
 
             app.UseRouting();
 
             app.UseAuthorization();
-
-            //app.MapRazorPages();
 
             app.MapControllers();
 
