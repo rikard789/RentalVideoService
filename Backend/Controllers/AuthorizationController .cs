@@ -37,12 +37,6 @@ namespace VideoRentalService.Controllers
             var user = await _userService.AuthenticateUserAsync(loginDto.Username, loginDto.Password);
             if (user == null) return Unauthorized("Invalid username or password.");
 
-            // Generate JWT Token
-            //var token = GenerateJwtToken(user);
-
-            //return Ok(new { token });
-
-
             // Generate a unique key for this user session
             var signingKey = new SymmetricSecurityKey(RandomNumberGenerator.GetBytes(32)); // 256-bit key
             var userId = Guid.NewGuid().ToString(); // Generate unique user session ID
@@ -53,7 +47,7 @@ namespace VideoRentalService.Controllers
             // Generate JWT Token
             var token = GenerateJwtToken(userId, user, signingKey);
 
-            return Ok(new { token, user, signingKey });
+            return Ok(new { token });
         }
 
         // Logout Endpoint

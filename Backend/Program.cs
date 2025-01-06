@@ -48,11 +48,9 @@ namespace VideoRentalService1
                     {
                         OnMessageReceived = context =>
                         {
-                            Console.WriteLine($"{AuthorizationController.UserKeys}");
                             // Ensure the token is extracted properly
                             var token = context.Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
                             context.Token = token;
-                            Console.WriteLine($"Token {context.Token}");
                             return Task.CompletedTask;
                         },
                     };
