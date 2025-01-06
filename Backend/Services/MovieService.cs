@@ -55,5 +55,12 @@ namespace VideoRentalService.Services
             await _context.SaveChangesAsync();
             return true;
         }
+
+        public async Task<List<Movie>> GetMoviesByGenreAsync(string genre)
+        {
+            return await _context.Movies
+                .Where(m => EF.Functions.Like(m.Genres, $"%{genre}%")) // Use LIKE for partial matching
+                .ToListAsync();
+        }
     }
 }

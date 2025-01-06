@@ -38,8 +38,6 @@ namespace VideoRentalService.Services
 
             user.Username = updatedUser.Username;
             user.Role = updatedUser.Role;
-            user.CreationTime = updatedUser.CreationTime;
-            user.UpdateTime = updatedUser.UpdateTime;
 
             _context.Users.Update(user);
 
@@ -56,5 +54,12 @@ namespace VideoRentalService.Services
             await _context.SaveChangesAsync();
             return true;
         }
+
+        public async Task<User> AuthenticateUserAsync(string username, string password)
+        {
+            return await _context.Users.FirstOrDefaultAsync(u =>
+                u.Username == username && u.Password == password);
+        }
+
     }
 }

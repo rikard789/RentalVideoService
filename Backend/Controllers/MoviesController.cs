@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using VideoRentalService.Models;
 using VideoRentalService.Services;
 
@@ -6,6 +7,7 @@ namespace VideoRentalService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class MoviesController : ControllerBase
     {
         private readonly MovieService _movieService;
@@ -82,6 +84,24 @@ namespace VideoRentalService.Controllers
             if (!success) return NotFound($"Movie with ID {id} not found.");
 
             return NoContent();
+        }
+
+        [HttpGet("genre/{genre}")]
+        public async Task<ActionResult<List<Movie>>> GetMoviesByGenre(string genre)
+        {
+            if (string.IsNullOrEmpty(genre))
+            {
+                return BadRequest("Genre parameter cannot be null or empty.");
+            }
+
+            var movies = await _movieService.GetMoviesByGenreAsync(genre);
+
+            if (movies == null || movies.Count == 0)
+            {
+                return NotFound($"No movies found for genre '{genre}'.");
+            }
+
+            return Ok(movies);
         }
     }
 }
