@@ -1,7 +1,10 @@
 ﻿################################################################################
-# Ten plik .gitignore został utworzony automatycznie przez Microsoft(R) Visual Studio.
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/Backend/.vs
 /.vs
+/Frontend/Properties
+/Backend/.vs
+/Backend/obj/Debug/net8.0
+/.gitignore
 /Backend/Migrations

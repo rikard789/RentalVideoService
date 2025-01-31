@@ -1,0 +1,1 @@
+C:\Users\Mateusz\Source\Repos\RentalVideoService2\Frontend\Frontend.csproj;x64

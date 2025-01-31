@@ -1,0 +1,155 @@
+﻿<Page
+    x:Class="Frontend.UserRentalHistoryPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Frontend"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="DarkGray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid Background="CornflowerBlue" Height="100" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Margin="30" FontSize="32" VerticalAlignment="Center">Wypożyczalnia filmów wideo</TextBlock>
+            <Button x:ConnectionId='2'                           Grid.Column="3" Content="Wypożycz online" Width="200" Height="40" Margin="10" />
+            <Button x:ConnectionId='3'                             Grid.Column="2" Content="Wypożycz DVD/kasetę" Width="200" Height="40" Margin="10" />
+            <Button x:ConnectionId='4'                       Grid.Column="4" Content="Wyloguj się" Width="100" Height="40" Margin="10" />
+        </Grid>
+        <Grid Grid.Row="1" Background="White" Height="75" VerticalAlignment="Top">
+            <TextBlock Foreground="Black" Grid.Column="0" Margin="30,0,0,0" FontSize="24" VerticalAlignment="Center">Historia wypożyczeń</TextBlock>
+        </Grid>
+        <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled">
+            <StackPanel>
+                <Grid Background="White" Margin="20" Height="100">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="170" />
+                        <ColumnDefinition Width="300" />
+                        <ColumnDefinition Width="310" />
+                        <ColumnDefinition Width="350" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock FontSize="32" Margin="20" VerticalAlignment="Center" Grid.Column="0" Text="Movie" Foreground="Black"/>
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="1" Text="Typ: film online" Foreground="Black"/>
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="2" Text="Data wypożyczenia: 30/12/2024" Foreground="Black"  />
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="3" Text="Koniec wypożyczenia: 07/02/2024" Foreground="Black"  />
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="5" Text="Kod: 7832YR2HR" Foreground="Black"  />
+                </Grid>
+                <Grid Background="White" Margin="20" Height="100">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="170" />
+                        <ColumnDefinition Width="300" />
+                        <ColumnDefinition Width="250" />
+                        <ColumnDefinition Width="250" />
+                        <ColumnDefinition Width="160" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock FontSize="32" Margin="20" VerticalAlignment="Center" Grid.Column="0" Text="Movie" Foreground="Black"/>
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="1" Text="Typ: kaseta VHS" Foreground="Black"/>
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="2" Text="Data wypożyczenia: 10/04/2024" Foreground="Black"  />
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="3" Text="Termin zwrotu: 15/06/2024" Foreground="Black"  />
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="4" Text="Data oddania: 21/06/2024" Foreground="Black"  />
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="5" Text="Kara: 4.99 PLN" Foreground="Black"  />
+                </Grid>
+                <Grid Background="White" Margin="20" Height="100">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="170" />
+                        <ColumnDefinition Width="300" />
+                        <ColumnDefinition Width="250" />
+                        <ColumnDefinition Width="250" />
+                        <ColumnDefinition Width="160" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock FontSize="32" Margin="20" VerticalAlignment="Center" Grid.Column="0" Text="Movie" Foreground="Black"/>
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="1" Text="Typ: płyta DVD" Foreground="Black"/>
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="2" Text="Data wypożyczenia: 07/03/2024" Foreground="Black"  />
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="3" Text="Termin zwrotu: 12/05/2024" Foreground="Black"  />
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="4" Text="Data oddania: 5/05/2024" Foreground="Black"  />
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="5" Text="Kara: brak" Foreground="Black"  />
+                </Grid>
+                <Grid Background="White" Margin="20" Height="100">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="170" />
+                        <ColumnDefinition Width="300" />
+                        <ColumnDefinition Width="310" />
+                        <ColumnDefinition Width="350" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock FontSize="32" Margin="20" VerticalAlignment="Center" Grid.Column="0" Text="Movie" Foreground="Black"/>
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="1" Text="Typ: film online" Foreground="Black"/>
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="2" Text="Data wypożyczenia: 10/02/2024" Foreground="Black"  />
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="3" Text="Koniec wypożyczenia: 11/03/2024" Foreground="Black"  />
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="5" Text="Kod: wygasł" Foreground="Black"  />
+                </Grid>
+                <Grid Background="White" Margin="20" Height="100">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="170" />
+                        <ColumnDefinition Width="300" />
+                        <ColumnDefinition Width="310" />
+                        <ColumnDefinition Width="350" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock FontSize="32" Margin="20" VerticalAlignment="Center" Grid.Column="0" Text="Movie" Foreground="Black"/>
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="1" Text="Typ: film online" Foreground="Black"/>
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="2" Text="Data wypożyczenia: 10/02/2024" Foreground="Black"  />
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="3" Text="Koniec wypożyczenia: 11/03/2024" Foreground="Black"  />
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="5" Text="Kod: wygasł" Foreground="Black"  />
+                </Grid>
+                <Grid Background="White" Margin="20" Height="100">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="170" />
+                        <ColumnDefinition Width="300" />
+                        <ColumnDefinition Width="310" />
+                        <ColumnDefinition Width="350" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock FontSize="32" Margin="20" VerticalAlignment="Center" Grid.Column="0" Text="Movie" Foreground="Black"/>
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="1" Text="Typ: film online" Foreground="Black"/>
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="2" Text="Data wypożyczenia: 10/02/2024" Foreground="Black"  />
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="3" Text="Koniec wypożyczenia: 11/03/2024" Foreground="Black"  />
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="5" Text="Kod: wygasł" Foreground="Black"  />
+                </Grid>
+                <Grid Background="White" Margin="20" Height="100">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="170" />
+                        <ColumnDefinition Width="300" />
+                        <ColumnDefinition Width="310" />
+                        <ColumnDefinition Width="350" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock FontSize="32" Margin="20" VerticalAlignment="Center" Grid.Column="0" Text="Movie" Foreground="Black"/>
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="1" Text="Typ: film online" Foreground="Black"/>
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="2" Text="Data wypożyczenia: 10/02/2024" Foreground="Black"  />
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="3" Text="Koniec wypożyczenia: 11/03/2024" Foreground="Black"  />
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="5" Text="Kod: wygasł" Foreground="Black"  />
+                </Grid>
+                <Grid Background="White" Margin="20" Height="100">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="170" />
+                        <ColumnDefinition Width="300" />
+                        <ColumnDefinition Width="310" />
+                        <ColumnDefinition Width="350" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock FontSize="32" Margin="20" VerticalAlignment="Center" Grid.Column="0" Text="Movie" Foreground="Black"/>
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="1" Text="Typ: film online" Foreground="Black"/>
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="2" Text="Data wypożyczenia: 10/02/2024" Foreground="Black"  />
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="3" Text="Koniec wypożyczenia: 11/03/2024" Foreground="Black"  />
+                    <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="5" Text="Kod: wygasł" Foreground="Black"  />
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
+
