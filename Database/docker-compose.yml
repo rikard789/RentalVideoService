@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  mssql-db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: mssql_container
+    ports:
+      - "1433:1433" # Map container's SQL Server port to your host machine
+    environment:
+      SA_PASSWORD: BobryRzadzaSwiatem!#21#5
+      ACCEPT_EULA: "Y"
+    volumes:
+      - mssql-data:/var/opt/mssql
+      # - ./init-database:/docker-entrypoint-initdb.d # Mount initialization scripts
+
+volumes:
+  mssql-data:

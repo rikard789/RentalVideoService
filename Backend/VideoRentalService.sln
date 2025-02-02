@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoRentalService1", "VideoRentalService1.csproj", "{A9BF7AF4-E73F-45FE-BC50-2C99E9CF80D8}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frontend", "..\Frontend\Frontend.csproj", "{41C9051B-4D65-429D-9D75-DBAC2D3A74C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoRentalService", "VideoRentalService.csproj", "{A9BF7AF4-E73F-45FE-BC50-2C99E9CF80D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +15,6 @@ Global
 		{A9BF7AF4-E73F-45FE-BC50-2C99E9CF80D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9BF7AF4-E73F-45FE-BC50-2C99E9CF80D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9BF7AF4-E73F-45FE-BC50-2C99E9CF80D8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{41C9051B-4D65-429D-9D75-DBAC2D3A74C9}.Debug|Any CPU.ActiveCfg = Debug|x64
-		{41C9051B-4D65-429D-9D75-DBAC2D3A74C9}.Debug|Any CPU.Build.0 = Debug|x64
-		{41C9051B-4D65-429D-9D75-DBAC2D3A74C9}.Debug|Any CPU.Deploy.0 = Debug|x64
-		{41C9051B-4D65-429D-9D75-DBAC2D3A74C9}.Release|Any CPU.ActiveCfg = Release|x64
-		{41C9051B-4D65-429D-9D75-DBAC2D3A74C9}.Release|Any CPU.Build.0 = Release|x64
-		{41C9051B-4D65-429D-9D75-DBAC2D3A74C9}.Release|Any CPU.Deploy.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
