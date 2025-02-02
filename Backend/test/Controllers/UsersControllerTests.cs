@@ -99,7 +99,7 @@ namespace test.Controllers
         [Fact]
         public async Task GetUserByUsername_NotFound()
         {
-            var result = await _controller.GetUserByUsername("");
+            var result = await _controller.GetUserByUsername("User123");
 
             Assert.IsType<NotFoundObjectResult>(result.Result);
         }

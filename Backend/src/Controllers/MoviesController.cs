@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using VideoRentalService.Models;
 using VideoRentalService.Services;
 
@@ -6,6 +7,7 @@ namespace VideoRentalService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class MoviesController : ControllerBase
     {
         private readonly MovieService _movieService;
@@ -16,7 +18,7 @@ namespace VideoRentalService.Controllers
         }
 
         // Get all movies which contain name
-        [HttpGet("search")]
+        [HttpGet("searchByName/{name}")]
         public async Task<ActionResult<List<Movie>>> FindMoviesByName(string name)
         {
             if (string.IsNullOrEmpty(name))
@@ -35,7 +37,7 @@ namespace VideoRentalService.Controllers
         }
 
         // Get movie by id
-        [HttpGet("search/{id}")]
+        [HttpGet("searchById/{id}")]
         public async Task<ActionResult<List<Movie>>> FindMovieById(int id)
         {
             if (id < 1)
@@ -49,7 +51,7 @@ namespace VideoRentalService.Controllers
         }
 
         // Get all movies
-        [HttpGet("getAll")]
+        [HttpGet("getAllMovies")]
         public async Task<ActionResult<List<Movie>>> GetAllMovies()
         {
             var movies = await _movieService.GetAllMoviesAsync();
@@ -57,7 +59,7 @@ namespace VideoRentalService.Controllers
         }
 
         // Create a new movie
-        [HttpPost]
+        [HttpPost("createMovie")]
         public async Task<ActionResult<Movie>> CreateMovie(Movie movie)
         {
             var newMovie = await _movieService.AddMovieAsync(movie);
@@ -65,7 +67,7 @@ namespace VideoRentalService.Controllers
         }
 
         // Update an existing movie
-        [HttpPut("{id}")]
+        [HttpPut("updateMovie/{id}")]
         public async Task<ActionResult<Movie>> UpdateMovie(int id, Movie updatedMovie)
         {
             var movie = await _movieService.UpdateMovieAsync(id, updatedMovie);
@@ -75,13 +77,31 @@ namespace VideoRentalService.Controllers
         }
 
         // Delete a movie
-        [HttpDelete("{id}")]
+        [HttpDelete("deleteMovie/{id}")]
         public async Task<ActionResult> DeleteMovie(int id)
         {
             var success = await _movieService.DeleteMovieAsync(id);
             if (!success) return NotFound($"Movie with ID {id} not found.");
 
             return NoContent();
+        }
+
+        [HttpGet("genre/{genre}")]
+        public async Task<ActionResult<List<Movie>>> GetMoviesByGenre(string genre)
+        {
+            if (string.IsNullOrEmpty(genre))
+            {
+                return BadRequest("Genre parameter cannot be null or empty.");
+            }
+
+            var movies = await _movieService.GetMoviesByGenreAsync(genre);
+
+            if (movies == null || movies.Count == 0)
+            {
+                return NotFound($"No movies found for genre '{genre}'.");
+            }
+
+            return Ok(movies);
         }
     }
 }
