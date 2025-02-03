@@ -39,4 +39,4 @@ dotnet test
 
 Example output:
 
-![img](/img/unit_test_output.png)
+![img](img/unit_test_output.png)
