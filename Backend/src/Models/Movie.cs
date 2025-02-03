@@ -15,11 +15,11 @@ namespace VideoRentalService.Models
 
         [Required]
         public string Type { get; set; } // 'DVD' or 'Electronic'
-        public string Image { get; set; } 
-        public DateTime CreationTime { get; set; }
-        public DateTime UpdateTime { get; set; }
+        public string? Image { get; set; } 
+        public DateTime? CreationTime { get; set; }
+        public DateTime? UpdateTime { get; set; }
 
         // Navigation property
-        public ICollection<Rental> Rentals { get; set; } // A movie can appear in multiple rentals
+        public ICollection<Rental>? Rentals { get; set; } // A movie can appear in multiple rentals
     }
 }

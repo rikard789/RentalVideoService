@@ -28,3 +28,15 @@ dotnet ef migrations add InitialMigration //create Migration
 dotnet ef database update                 // update mssql database
 ```
 5. You can check now your database if records were added.
+
+
+Running unit tests:
+
+```
+cd /Backend/test
+dotnet test
+```
+
+Example output:
+
+![img](img/unit_test_output.png)

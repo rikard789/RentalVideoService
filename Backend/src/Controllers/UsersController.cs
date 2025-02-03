@@ -39,10 +39,10 @@ namespace VideoRentalService.Controllers
         [HttpGet("getUserUsername/{username}")]
         public async Task<ActionResult<List<User>>> GetUserByUsername(string username)
         {
-            var user = await _userService.FindUsersByUsernameAsync(username);
-            if (user == null) return NotFound($"User with username {username} not found.");
+            List<User> users = await _userService.FindUsersByUsernameAsync(username);
+            if (users == null || users.Count.Equals(0)) return NotFound($"User with username {username} not found.");
 
-            return Ok(user);
+            return Ok(users);
         }
 
         // Create a new user

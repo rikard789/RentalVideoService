@@ -16,10 +16,10 @@ namespace VideoRentalService.Models
         [Required]
         public string Role { get; set; } // 'User' or 'Employee'
 
-        public DateTime? CreationTime { get; set; }
-        public DateTime? UpdateTime { get; set; }
+        public DateTime CreationTime { get; set; }
+        public DateTime UpdateTime { get; set; }
 
         // Navigation property
-        public ICollection<Rental>? Rentals { get; set; } // A user can have many rentals
+        public ICollection<Rental> Rentals { get; set; } // A user can have many rentals
     }
 }
