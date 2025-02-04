@@ -7,7 +7,7 @@ using VideoRentalService.Controllers;
 using VideoRentalService.Services;
 using System.IdentityModel.Tokens.Jwt;
 
-namespace VideoRentalService1
+namespace VideoRentalService
 {
     public class Program
     {
@@ -90,6 +90,17 @@ namespace VideoRentalService1
 
             });
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll",
+                    policy =>
+                    {
+                        policy.AllowAnyOrigin()
+                              .AllowAnyMethod()
+                              .AllowAnyHeader();
+                    });
+            });
+
             builder.Services.AddControllers();
             builder.Services.AddScoped<MovieService>();
             builder.Services.AddScoped<UserService>();
@@ -117,6 +128,7 @@ namespace VideoRentalService1
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseCors("AllowAll");
 
             app.UseAuthentication(); // Enables JWT token validation
             app.UseAuthorization();

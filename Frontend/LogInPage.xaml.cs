@@ -12,27 +12,91 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Text;
+using System.Threading.Tasks;
+using Windows.UI.Popups;
+using Newtonsoft.Json;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace Frontend
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class LogInPage : Page
     {
+        private readonly HttpClient _httpClient = new HttpClient { BaseAddress = new Uri("https://localhost:7137/") };
+
         public LogInPage()
         {
             this.InitializeComponent();
         }
-        private void OnLogInClick(object sender, RoutedEventArgs e)
+
+        private async void OnLogInClick(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(UserRentalHistoryPage));
+            string username = UsernameTextBox.Text;
+            string password = PasswordBox.Password;
+
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
+            {
+                await ShowMessage("Proszę podać nazwę użytkownika i hasło.");
+                return;
+            }
+
+            var isSuccess = await AuthenticateUser(username, password);
+            if (isSuccess)
+            {
+                this.Frame.Navigate(typeof(UserRentalHistoryPage));
+            }
         }
+
         private void OnSignInClick(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(SignInPage));
+        }
+
+        private async Task<bool> AuthenticateUser(string username, string password)
+        {
+            try
+            {
+                var requestBody = new { username = username, password = password };
+                string jsonContent = JsonConvert.SerializeObject(requestBody);
+                var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
+
+                HttpResponseMessage response = await _httpClient.PostAsync("api/Authorization/login", content);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    string responseBody = await response.Content.ReadAsStringAsync();
+                    var tokenData = JsonConvert.DeserializeObject<TokenResponse>(responseBody);
+
+                    // Przechowujemy token JWT
+                    Windows.Storage.ApplicationData.Current.LocalSettings.Values["JwtToken"] = tokenData.Token;
+
+                    return true;
+                }
+                else
+                {
+                    await ShowMessage("Nieprawidłowa nazwa użytkownika lub hasło.");
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                await ShowMessage("Błąd logowania: " + ex.Message);
+                return false;
+            }
+        }
+
+        private async Task ShowMessage(string message)
+        {
+            var dialog = new MessageDialog(message);
+            await dialog.ShowAsync();
+        }
+
+        public class TokenResponse
+        {
+            public string Token { get; set; }
         }
     }
 }
