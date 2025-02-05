@@ -45,14 +45,6 @@ namespace VideoRentalService.Controllers
             return Ok(users);
         }
 
-        // Create a new user
-        [HttpPost("createUser")]
-        public async Task<ActionResult<User>> CreateUser(User user)
-        {
-            var newUser = await _userService.AddUserAsync(user);
-            return CreatedAtAction(nameof(GetUserById), new { id = newUser.UserId }, newUser);
-        }
-
         // Update an existing user by id
         [HttpPut("updateUser/{id}")]
         public async Task<ActionResult<User>> UpdateUser(int id, User updatedUser)
@@ -71,6 +63,17 @@ namespace VideoRentalService.Controllers
             if (!success) return NotFound($"User with ID {id} not found.");
 
             return NoContent();
+        }
+
+
+
+        // Create a new user
+        [AllowAnonymous]
+        [HttpPost("createUser")]
+        public async Task<ActionResult<User>> CreateUser(User user)
+        {
+            var newUser = await _userService.AddUserAsync(user);
+            return CreatedAtAction(nameof(GetUserById), new { id = newUser.UserId }, newUser);
         }
     }
 }

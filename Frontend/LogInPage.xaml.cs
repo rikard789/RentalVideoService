@@ -23,9 +23,24 @@ using Newtonsoft.Json;
 
 namespace Frontend
 {
+    // SSL cert fix 
     public sealed partial class LogInPage : Page
     {
-        private readonly HttpClient _httpClient = new HttpClient { BaseAddress = new Uri("https://localhost:7137/") };
+        private static HttpClient CreateHttpClient()
+        {
+            var handler = new HttpClientHandler();
+            handler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) =>
+            {
+                return true;
+            };
+
+            return new HttpClient(handler) { BaseAddress = new Uri("https://127.0.0.1:7137/") };
+        }
+
+        private readonly HttpClient _httpClient = CreateHttpClient();
+
+
+
 
         public LogInPage()
         {
@@ -62,6 +77,7 @@ namespace Frontend
                 var requestBody = new { username = username, password = password };
                 string jsonContent = JsonConvert.SerializeObject(requestBody);
                 var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
+                //_httpClient.Timeout = TimeSpan.FromSeconds(30);
 
                 HttpResponseMessage response = await _httpClient.PostAsync("api/Authorization/login", content);
 
@@ -83,7 +99,7 @@ namespace Frontend
             }
             catch (Exception ex)
             {
-                await ShowMessage("Błąd logowania: " + ex.Message);
+                await ShowMessage("Błąd logowania: " + ex.Message + " " + ex.InnerException?.Message);
                 return false;
             }
         }
