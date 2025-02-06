@@ -30,6 +30,10 @@ namespace Frontend
         {
             this.Frame.Navigate(typeof(EmployeeProductIntroductionPage));
         }
+        private void OnViewMoviesClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MovieListPage));
+        }
         private void OnLogOutClick(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(LogInPage));
