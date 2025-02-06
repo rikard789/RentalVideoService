@@ -148,6 +148,9 @@
 	<Compile Include="MovieListPage.xaml.cs">
 		<DependentUpon>MovieListPage.xaml</DependentUpon>
     </Compile>
+	<Compile Include="EditMoviePage.xaml.cs">
+		<DependentUpon>EditMoviePage.xaml</DependentUpon>
+	</Compile>
     <Compile Include="ViewModels\RentalViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -178,6 +181,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="LogInPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+	<Page Include="EditMoviePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

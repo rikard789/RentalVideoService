@@ -72,61 +72,69 @@
         </StackPanel>
 
         <!-- Lista filmów -->
-        <ListView x:Name="MoviesListView"
-                  Grid.Row="2"
-                  Margin="10"
-                  HorizontalAlignment="Stretch"
-                  HorizontalContentAlignment="Stretch">
-            <ListView.ItemTemplate>
-                <DataTemplate x:DataType="local:Movie">
-                    <Border BorderThickness="1"
-                            BorderBrush="DarkGray"
-                            Padding="10"
-                            Margin="5"
-                            Background="LightGray">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
+  <ListView x:Name="MoviesListView"
+          Grid.Row="2"
+          Margin="10"
+          HorizontalAlignment="Stretch"
+          HorizontalContentAlignment="Stretch">
+    <ListView.ItemTemplate>
+        <DataTemplate x:DataType="local:Movie">
+            <Border BorderThickness="1"
+                    BorderBrush="DarkGray"
+                    Padding="10"
+                    Margin="5"
+                    Background="LightGray">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
 
-                            <!-- ID filmu -->
-                            <TextBlock Text="{Binding MovieId}"
-                                       FontSize="20"
-                                       FontWeight="Bold"
-                                       Foreground="Black"
-                                       VerticalAlignment="Center"
-                                       Margin="0,0,10,0" />
+                    <!-- ID filmu -->
+                    <TextBlock Text="{Binding MovieId}"
+                               FontSize="20"
+                               FontWeight="Bold"
+                               Foreground="Black"
+                               VerticalAlignment="Center"
+                               Margin="0,0,10,0" />
 
-                            <!-- Pozostałe informacje -->
-                            <StackPanel Grid.Column="1">
-                                <TextBlock Text="{Binding Title}"
-                                           FontSize="20"
-                                           FontWeight="Bold"
-                                           Foreground="Black"/>
-                                <TextBlock Text="{Binding Genres}"
-                                           FontSize="16"
-                                           Foreground="Black"/>
-                                <TextBlock Text="{Binding Type}"
-                                           FontSize="16"
-                                           Foreground="Black"/>
-                                <TextBlock Text="{Binding RentalHistory}"
-                                           FontSize="14"
-                                           Foreground="Gray"/>
-                            </StackPanel>
-                        </Grid>
-                    </Border>
-                </DataTemplate>
-            </ListView.ItemTemplate>
+                    <!-- Pozostałe informacje -->
+                    <StackPanel Grid.Column="1">
+                        <TextBlock Text="{Binding Title}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   Foreground="Black"/>
+                        <TextBlock Text="{Binding Genres}"
+                                   FontSize="16"
+                                   Foreground="Black"/>
+                        <TextBlock Text="{Binding Type}"
+                                   FontSize="16"
+                                   Foreground="Black"/>
+                        <TextBlock Text="{Binding RentalHistory}"
+                                   FontSize="14"
+                                   Foreground="Gray"/>
+                    </StackPanel>
 
-            <!-- Styl dla ListViewItem -->
-            <ListView.ItemContainerStyle>
-                <Style TargetType="ListViewItem">
-                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
-                    <Setter Property="Padding" Value="0"/>
-                    <Setter Property="Margin" Value="0,5,0,5"/>
-                </Style>
-            </ListView.ItemContainerStyle>
-        </ListView>
+                    <!-- Przycisk Edytuj -->
+                    <Button Grid.Column="2"
+                            Content="Edytuj"
+                            Margin="10"
+                            Click="EditMovieButton_Click"
+                            Tag="{Binding MovieId}"/>
+                </Grid>
+            </Border>
+        </DataTemplate>
+    </ListView.ItemTemplate>
+
+    <!-- Styl dla ListViewItem -->
+    <ListView.ItemContainerStyle>
+        <Style TargetType="ListViewItem">
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="Margin" Value="0,5,0,5"/>
+        </Style>
+    </ListView.ItemContainerStyle>
+</ListView>
     </Grid>
 </Page>

@@ -185,6 +185,16 @@ namespace Frontend
             this.Frame.Navigate(typeof(LogInPage));
         }
 
+        private void EditMovieButton_Click(object sender, RoutedEventArgs e)
+        {
+            var button = sender as Button;
+            if (button != null)
+            {
+                int movieId = (int)button.Tag;
+                this.Frame.Navigate(typeof(EditMoviePage), movieId);
+            }
+        }
+
     }
 
     public class Movie
