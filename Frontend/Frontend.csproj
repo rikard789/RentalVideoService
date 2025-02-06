@@ -10,8 +10,9 @@
     <RootNamespace>Frontend</RootNamespace>
     <AssemblyName>Frontend</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
+    <LangVersion>8.0</LangVersion>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.20348.0</TargetPlatformVersion>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.19041.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.19041.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
@@ -131,6 +132,7 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Services\RentalService.cs" />
     <Compile Include="SignInPage.xaml.cs">
       <DependentUpon>SignInPage.xaml</DependentUpon>
     </Compile>
@@ -143,6 +145,7 @@
     <Compile Include="UserRentalHistoryPage.xaml.cs">
       <DependentUpon>UserRentalHistoryPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\RentalViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
