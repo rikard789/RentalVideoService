@@ -47,7 +47,7 @@ namespace VideoRentalService.Controllers
             // Generate JWT Token
             var token = GenerateJwtToken(userId, user, signingKey);
 
-            return Ok(new { token });
+            return Ok(new { token, user.Role });
         }
 
         // Logout Endpoint

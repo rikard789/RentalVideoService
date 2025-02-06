@@ -59,6 +59,7 @@ namespace VideoRentalService.Controllers
         }
 
         // Create a new movie
+        [Authorize(Roles = "admin")]
         [HttpPost("createMovie")]
         public async Task<ActionResult<Movie>> CreateMovie(Movie movie)
         {
@@ -67,6 +68,7 @@ namespace VideoRentalService.Controllers
         }
 
         // Update an existing movie
+        [Authorize(Roles = "admin")]
         [HttpPut("updateMovie/{id}")]
         public async Task<ActionResult<Movie>> UpdateMovie(int id, Movie updatedMovie)
         {
@@ -77,6 +79,7 @@ namespace VideoRentalService.Controllers
         }
 
         // Delete a movie
+        [Authorize(Roles = "admin")]
         [HttpDelete("deleteMovie/{id}")]
         public async Task<ActionResult> DeleteMovie(int id)
         {

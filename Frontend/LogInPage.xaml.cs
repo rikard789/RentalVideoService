@@ -39,9 +39,6 @@ namespace Frontend
 
         private readonly HttpClient _httpClient = CreateHttpClient();
 
-
-
-
         public LogInPage()
         {
             this.InitializeComponent();
@@ -59,10 +56,7 @@ namespace Frontend
             }
 
             var isSuccess = await AuthenticateUser(username, password);
-            if (isSuccess)
-            {
-                this.Frame.Navigate(typeof(UserRentalHistoryPage));
-            }
+            if (isSuccess) {}
         }
 
         private void OnSignInClick(object sender, RoutedEventArgs e)
@@ -77,7 +71,6 @@ namespace Frontend
                 var requestBody = new { username = username, password = password };
                 string jsonContent = JsonConvert.SerializeObject(requestBody);
                 var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
-                //_httpClient.Timeout = TimeSpan.FromSeconds(30);
 
                 HttpResponseMessage response = await _httpClient.PostAsync("api/Authorization/login", content);
 
@@ -88,6 +81,18 @@ namespace Frontend
 
                     // Przechowujemy token JWT
                     Windows.Storage.ApplicationData.Current.LocalSettings.Values["JwtToken"] = tokenData.Token;
+
+                    // Przekierowanie na podstawie roli
+                    if (tokenData.Role == "admin")
+                    {
+                        this.Frame.Navigate(typeof(EmployeeProductHandlingPage));
+                    }
+                   
+
+                    else
+                    {
+                        this.Frame.Navigate(typeof(UserRentalHistoryPage));
+                    }
 
                     return true;
                 }
@@ -113,6 +118,8 @@ namespace Frontend
         public class TokenResponse
         {
             public string Token { get; set; }
+            public string Role { get; set; }
         }
     }
+
 }

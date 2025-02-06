@@ -26,4 +26,7 @@ namespace Frontend.Models
         // Kolekcja wypożyczeń powiązana z użytkownikiem
         public List<Rental> Rentals { get; set; } // A user can have many rentals
     }
+
+
+
 }
