@@ -14,7 +14,6 @@
 			<RowDefinition Height="*" />
 		</Grid.RowDefinitions>
 
-		<!-- Nagłówek strony -->
 		<TextBlock Text="Edytuj Film"
                    FontSize="32"
                    FontWeight="Bold"
@@ -29,7 +28,6 @@
 				Margin="10"
 				Grid.Column="1"/>
 
-		<!-- Formularz edycji -->
 		<StackPanel Grid.Row="1"
                     Margin="10">
 			<TextBox x:Name="TitleTextBox"

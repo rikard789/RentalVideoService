@@ -44,7 +44,6 @@ namespace Frontend
                 return;
             }
 
-            // Get the stored JWT token
             var token = Windows.Storage.ApplicationData.Current.LocalSettings.Values["JwtToken"] as string;
 
             if (string.IsNullOrEmpty(token))
@@ -56,7 +55,6 @@ namespace Frontend
             var isSuccess = await AddMovieToBackend(movieTitle, movieGenre, movieCategory, token);
             if (isSuccess)
             {
-                // You can add additional success handling here, e.g., navigate to another page or reset fields
                 await ShowMessage("Film został dodany pomyślnie!");
             }
         }
@@ -75,7 +73,6 @@ namespace Frontend
                 string jsonContent = JsonConvert.SerializeObject(requestBody);
                 var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
 
-                // Prepare HTTP request with Authorization header
                 var request = new HttpRequestMessage(HttpMethod.Post, "api/Movies/createMovie")
                 {
                     Content = content

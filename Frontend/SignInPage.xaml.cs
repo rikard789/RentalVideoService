@@ -68,7 +68,7 @@ namespace Frontend
             if (isSuccess)
             {
                 await ShowMessage("Rejestracja zakończona sukcesem! Możesz się teraz zalogować.");
-                this.Frame.Navigate(typeof(LogInPage)); // Przekierowanie do logowania
+                this.Frame.Navigate(typeof(LogInPage)); 
             }
         }
 
@@ -76,20 +76,18 @@ namespace Frontend
         {
             try
             {
-                // Tworzymy obiekt requestBody z polem "rentals" jako pustą listą
                 var requestBody = new
                 {
                     username = username,
                     password = password,
                     role = userType,
-                    rentals = new List<string>() // Inicjalizacja pustej listy dla "rentals"
+                    rentals = new List<string>() 
                 };
 
-                // Serializacja obiektu do JSON
+
                 string jsonContent = JsonConvert.SerializeObject(requestBody);
                 var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
 
-                // Wysyłanie żądania POST
                 HttpResponseMessage response = await _httpClient.PostAsync("api/Users/createUser", content);
 
                 if (response.IsSuccessStatusCode)

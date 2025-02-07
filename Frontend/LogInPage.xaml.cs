@@ -79,7 +79,7 @@ namespace Frontend
                     string responseBody = await response.Content.ReadAsStringAsync();
                     var tokenData = JsonConvert.DeserializeObject<TokenResponse>(responseBody);
 
-                    // Przechowujemy token JWT
+
                     Windows.Storage.ApplicationData.Current.LocalSettings.Values["JwtToken"] = tokenData.Token;
 
                     // Zapisujemy login użytkownika

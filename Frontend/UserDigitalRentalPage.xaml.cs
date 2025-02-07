@@ -83,8 +83,6 @@ namespace Frontend
             if (button != null)
             {
                 int movieId = (int)button.Tag;
-                // Przekierowanie do strony wypożyczenia filmu
-                // this.Frame.Navigate(typeof(RentMoviePage), movieId);
                 this.Frame.Navigate(typeof(RentMoviePage));
                 
             }

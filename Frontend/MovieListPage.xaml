@@ -15,7 +15,6 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <!-- Nagłówek strony -->
         <Grid Grid.Row="0" Margin="10">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -45,12 +44,10 @@
                     Grid.Column="2"/>
         </Grid>
 
-        <!-- Panel wyszukiwania -->
         <StackPanel Orientation="Horizontal"
                     Grid.Row="1"
                     HorizontalAlignment="Center"
                     Margin="10">
-            <!-- Wyszukiwanie po nazwie -->
             <TextBox x:Name="SearchByNameTextBox"
                      PlaceholderText="Wpisz nazwę filmu"
                      Width="200"
@@ -60,7 +57,6 @@
                     Margin="5"
                     Click="SearchByNameButton_Click"/>
 
-            <!-- Wyszukiwanie po ID -->
             <TextBox x:Name="SearchByIdTextBox"
                      PlaceholderText="Wpisz ID filmu"
                      Width="100"
@@ -71,7 +67,6 @@
                     Click="SearchByIdButton_Click"/>
         </StackPanel>
 
-        <!-- Lista filmów -->
   <ListView x:Name="MoviesListView"
           Grid.Row="2"
           Margin="10"
@@ -91,7 +86,7 @@
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
 
-                    <!-- ID filmu -->
+  
                     <TextBlock Text="{Binding MovieId}"
                                FontSize="20"
                                FontWeight="Bold"
@@ -99,7 +94,6 @@
                                VerticalAlignment="Center"
                                Margin="0,0,10,0" />
 
-                    <!-- Pozostałe informacje -->
                     <StackPanel Grid.Column="1">
                         <TextBlock Text="{Binding Title}"
                                    FontSize="20"
@@ -116,7 +110,6 @@
                                    Foreground="Gray"/>
                     </StackPanel>
 
-                    <!-- Przycisk Edytuj -->
                     <Button Grid.Column="2"
                             Content="Edytuj"
                             Margin="10"
@@ -127,7 +120,6 @@
         </DataTemplate>
     </ListView.ItemTemplate>
 
-    <!-- Styl dla ListViewItem -->
     <ListView.ItemContainerStyle>
         <Style TargetType="ListViewItem">
             <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
