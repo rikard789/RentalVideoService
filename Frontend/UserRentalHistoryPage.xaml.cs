@@ -95,11 +95,6 @@ namespace Frontend
             await dialog.ShowAsync();
         }
 
-        private void OnRentPhysicalClick(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(UserPhysicalRentalPage));
-        }
-
         private void OnRentOnlineClick(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(UserDigitalRentalPage));
