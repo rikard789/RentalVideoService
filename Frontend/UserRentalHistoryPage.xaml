@@ -36,16 +36,7 @@
 				<ListView x:Name="RentalsListView">
 					<ListView.ItemTemplate>
 						<DataTemplate>
-							<StackPanel>
-								<TextBlock Text="RentalId: {Binding RentalId}" FontWeight="Bold"/>
-								<TextBlock Text="UserId: {Binding UserId}" />
-								<TextBlock Text="MovieId: {Binding MovieId}" />
-								<TextBlock Text="RentalDate: {Binding RentalDate}" />
-								<TextBlock Text="ReturnDate: {Binding ReturnDate}" />
-								<TextBlock Text="IsDamaged: {Binding IsDamaged}" />
-								<TextBlock Text="Penalty: {Binding Penalty}" />
-								<TextBlock Text="IsPaid: {Binding IsPaid}" />
-							</StackPanel>
+
 						</DataTemplate>
 					</ListView.ItemTemplate>
 				</ListView>

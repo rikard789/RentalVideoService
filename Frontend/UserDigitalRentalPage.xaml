@@ -30,7 +30,7 @@
                        VerticalAlignment="Center"/>
 
 			<Button Click="OnLogOutClick"
-                    Content="Wyloguj się"
+                    Content="Powrót"
                     Width="100"
                     Height="40"
                     Margin="10"

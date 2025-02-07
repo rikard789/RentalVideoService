@@ -139,8 +139,8 @@
     <Compile Include="UserDigitalRentalPage.xaml.cs">
       <DependentUpon>UserDigitalRentalPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserPhysicalRentalPage.xaml.cs">
-      <DependentUpon>UserPhysicalRentalPage.xaml</DependentUpon>
+    <Compile Include="RentMoviePage.xaml.cs">
+      <DependentUpon>RentMoviePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserRentalHistoryPage.xaml.cs">
       <DependentUpon>UserRentalHistoryPage.xaml</DependentUpon>
@@ -204,7 +204,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserPhysicalRentalPage.xaml">
+    <Page Include="RentMoviePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
