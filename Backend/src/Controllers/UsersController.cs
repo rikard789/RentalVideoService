@@ -27,7 +27,7 @@ namespace VideoRentalService.Controllers
         }
 
         // Get user by ID
-        [Authorize(Roles = "admin")]
+        //[Authorize(Roles = "admin")]
         [HttpGet("getUser/{id}")]
         public async Task<ActionResult<User>> GetUserById(int id)
         {
@@ -38,7 +38,7 @@ namespace VideoRentalService.Controllers
         }
 
         // Get user by Username
-        [Authorize(Roles = "admin")]
+        //[Authorize(Roles = "admin")]
         [HttpGet("getUserUsername/{username}")]
         public async Task<ActionResult<List<User>>> GetUserByUsername(string username)
         {

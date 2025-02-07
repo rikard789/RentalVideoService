@@ -82,13 +82,14 @@ namespace Frontend
                     // Przechowujemy token JWT
                     Windows.Storage.ApplicationData.Current.LocalSettings.Values["JwtToken"] = tokenData.Token;
 
+                    // Zapisujemy login użytkownika
+                    Windows.Storage.ApplicationData.Current.LocalSettings.Values["Username"] = username;
+
                     // Przekierowanie na podstawie roli
                     if (tokenData.Role == "admin")
                     {
                         this.Frame.Navigate(typeof(EmployeeProductHandlingPage));
                     }
-                   
-
                     else
                     {
                         this.Frame.Navigate(typeof(UserRentalHistoryPage));
