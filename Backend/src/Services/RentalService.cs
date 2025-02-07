@@ -13,12 +13,33 @@ namespace VideoRentalService.Services
             _context = context;
         }
 
-        public async Task<List<Rental>> GetRentalsForUserAsync(int userId) {
+        public async Task<List<Rental>> GetRentalsForUserAsync(int userId)
+        {
             return await _context.Rentals
                 .Where(r => r.UserId == userId)
-                .Include(r => r.Movie)
+                .Select(r => new Rental
+                {
+                    RentalId = r.RentalId,
+                    UserId = r.UserId,
+                    MovieId = r.MovieId,
+                    RentalDate = r.RentalDate,
+                    ReturnDate = r.ReturnDate,
+                    IsDamaged = r.IsDamaged,
+                    Penalty = r.Penalty,
+                    IsPaid = r.IsPaid,
+                    CreationTime = r.CreationTime,
+                    UpdateTime = r.UpdateTime,
+                    Movie = new Movie
+                    {
+                        MovieId = r.Movie.MovieId,
+                        Title = r.Movie.Title,
+                        Genres = r.Movie.Genres,
+                        Type = r.Movie.Type,
+                    }
+                })
                 .ToListAsync();
         }
+
 
         public async Task AddRentalMovieAsync(int userId, int movieId) {
             var rental = new Rental{

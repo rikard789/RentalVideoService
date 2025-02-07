@@ -203,6 +203,6 @@ namespace Frontend
         public string Title { get; set; }
         public string Genres { get; set; }
         public string Type { get; set; }
-        public string RentalHistory { get; set; }
+        public string? RentalHistory { get; set; }
     }
 }

@@ -18,6 +18,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Popups;
 using Newtonsoft.Json;
+using System.IdentityModel.Tokens.Jwt;
+using Frontend.Models;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -81,6 +83,13 @@ namespace Frontend
 
 
                     Windows.Storage.ApplicationData.Current.LocalSettings.Values["JwtToken"] = tokenData.Token;
+                    Windows.Storage.ApplicationData.Current.LocalSettings.Values["UserId"] = tokenData.UserId;
+
+                    //var userId = ExtractUserIdFromToken(tokenData.Token);
+                    //if (!string.IsNullOrEmpty(userId))
+                    //{
+                    //    Windows.Storage.ApplicationData.Current.LocalSettings.Values["UserId"] = userId;
+                    //}
 
                     // Zapisujemy login użytkownika
                     Windows.Storage.ApplicationData.Current.LocalSettings.Values["Username"] = username;
@@ -110,6 +119,15 @@ namespace Frontend
             }
         }
 
+        //private string ExtractUserIdFromToken(string token)
+        //{
+        //    var handler = new JwtSecurityTokenHandler();
+        //    var jwtToken = handler.ReadJwtToken(token);
+
+        //    var userIdClaim = jwtToken.Claims.FirstOrDefault(c => c.Type == "UserId");
+        //    return userIdClaim?.Value;
+        //}
+
         private async Task ShowMessage(string message)
         {
             var dialog = new MessageDialog(message);
@@ -120,6 +138,7 @@ namespace Frontend
         {
             public string Token { get; set; }
             public string Role { get; set; }
+            public int UserId { get; set; }
         }
     }
 
