@@ -30,7 +30,7 @@ namespace Frontend
             var handler = new HttpClientHandler();
             handler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) =>
             {
-                return true; 
+                return true;
             };
 
             return new HttpClient(handler) { BaseAddress = new Uri("https://127.0.0.1:7137/") };
@@ -48,6 +48,15 @@ namespace Frontend
             string username = UsernameTextBox.Text;
             string password = PasswordBox.Password;
             string userType = ((ComboBoxItem)UserTypeComboBox.SelectedItem)?.Content.ToString();
+
+            if (userType == "Użytkownik")
+            {
+                userType = "user";
+            }
+            else if (userType == "Pracownik")
+            {
+                userType = "admin";
+            }
 
             if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password) || string.IsNullOrWhiteSpace(userType))
             {
