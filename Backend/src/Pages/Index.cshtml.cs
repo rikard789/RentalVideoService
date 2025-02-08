@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace VideoRentalService1.Pages
+namespace VideoRentalService.Pages
 {
     public class IndexModel : PageModel
     {

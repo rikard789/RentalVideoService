@@ -10,8 +10,9 @@
     <RootNamespace>Frontend</RootNamespace>
     <AssemblyName>Frontend</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
+    <LangVersion>8.0</LangVersion>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.19041.0</TargetPlatformVersion>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.22621.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.19041.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
@@ -131,17 +132,26 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\Rental.cs" />
+    <Compile Include="Models\TokenResponse.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="SignInPage.xaml.cs">
       <DependentUpon>SignInPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserDigitalRentalPage.xaml.cs">
       <DependentUpon>UserDigitalRentalPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserPhysicalRentalPage.xaml.cs">
-      <DependentUpon>UserPhysicalRentalPage.xaml</DependentUpon>
+    <Compile Include="RentMoviePage.xaml.cs">
+      <DependentUpon>RentMoviePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserRentalHistoryPage.xaml.cs">
       <DependentUpon>UserRentalHistoryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MovieListPage.xaml.cs">
+      <DependentUpon>MovieListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditMoviePage.xaml.cs">
+      <DependentUpon>EditMoviePage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -175,6 +185,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="EditMoviePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MovieListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -187,7 +205,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserPhysicalRentalPage.xaml">
+    <Page Include="RentMoviePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -199,6 +217,12 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.14</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt">
+      <Version>8.4.0</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

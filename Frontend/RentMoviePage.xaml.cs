@@ -5,15 +5,16 @@ using Windows.UI.Xaml.Controls;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 using Windows.Storage;
 
 namespace Frontend
 {
-    public sealed partial class EmployeeProductHandlingPage : Page
+    public sealed partial class RentMoviePage : Page
     {
         private readonly HttpClient _httpClient;
 
-        public EmployeeProductHandlingPage()
+        public RentMoviePage()
         {
             this.InitializeComponent();
             _httpClient = CreateHttpClient();
@@ -30,50 +31,44 @@ namespace Frontend
             return new HttpClient(handler) { BaseAddress = new Uri("https://127.0.0.1:7137/") };
         }
 
-        private async void OnSetPenaltyClick(object sender, RoutedEventArgs e)
+        private async void OnRentClick(object sender, RoutedEventArgs e)
         {
-            string rentalId = RentalIdTextBox.Text;
-            bool isDamaged = IsDamagedComboBox.SelectedIndex == 0; 
-            string penaltyText = PenaltyTextBox.Text;
+            string userId = UserIdTextBox.Text;
+            string movieId = MovieIdTextBox.Text;
 
-            if (string.IsNullOrWhiteSpace(rentalId) || string.IsNullOrWhiteSpace(penaltyText))
+            if (string.IsNullOrWhiteSpace(userId) || string.IsNullOrWhiteSpace(movieId))
             {
-                await ShowMessage("Proszę podać ID wypożyczenia i wartość kary.");
+                await ShowMessage("Proszę podać User ID i Movie ID.");
                 return;
             }
 
-            if (!decimal.TryParse(penaltyText, out decimal penalty))
-            {
-                await ShowMessage("Wartość kary musi być liczbą.");
-                return;
-            }
-
-            bool isSuccess = await SetPenalty(rentalId, isDamaged, penalty);
+            bool isSuccess = await RentMovie(userId, movieId);
             if (isSuccess)
             {
-                await ShowMessage("Kara została pomyślnie naliczona.");
+                await ShowMessage("Film został pomyślnie wypożyczony.");
+                this.Frame.Navigate(typeof(UserDigitalRentalPage));
             }
             else
             {
-                await ShowMessage("Wystąpił błąd podczas naliczania kary.");
+                await ShowMessage("Wystąpił błąd podczas wypożyczania filmu.");
             }
         }
 
-        private async Task<bool> SetPenalty(string  rentalId, bool isDamaged, decimal penalty)
+        private async Task<bool> RentMovie(string userId, string movieId)
         {
             try
             {
                 var localSettings = ApplicationData.Current.LocalSettings;
                 if (!localSettings.Values.ContainsKey("JwtToken"))
                 {
-                    await ShowMessage("Nie jesteś zalogowany. Zaloguj się, aby wykonać tę operację.");
+                    await ShowMessage("Nie jesteś zalogowany. Zaloguj się, aby wypożyczyć film.");
                     return false;
                 }
 
                 string jwtToken = localSettings.Values["JwtToken"].ToString();
                 _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", jwtToken);
 
-                string requestUri = $"/api/Rental/set-penalty{rentalId}/{isDamaged}/{penalty}";
+                string requestUri = $"/api/Rental/addMovie/{userId}/{movieId}";
                 HttpResponseMessage response = await _httpClient.PostAsync(requestUri, null);
 
                 if (response.IsSuccessStatusCode)
@@ -94,6 +89,12 @@ namespace Frontend
             }
         }
 
+        //private async Task ShowMessage(string message)
+        //{
+        //    var dialog = new MessageDialog(message);
+        //    await dialog.ShowAsync();
+        //}
+
         private async Task ShowMessage(string message)
         {
             var dialog = new ContentDialog
@@ -107,19 +108,15 @@ namespace Frontend
             await dialog.ShowAsync();
         }
 
-        private void OnAddProductClick(object sender, RoutedEventArgs e)
+
+
+
+
+        private void OnBackButtonClick(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(EmployeeProductIntroductionPage));
+            this.Frame.Navigate(typeof(UserDigitalRentalPage));
         }
 
-        private void OnViewMoviesClick(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(MovieListPage));
-        }
 
-        private void OnLogOutClick(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(LogInPage));
-        }
     }
 }

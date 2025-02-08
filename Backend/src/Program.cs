@@ -6,8 +6,10 @@ using Microsoft.OpenApi.Models;
 using VideoRentalService.Controllers;
 using VideoRentalService.Services;
 using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 
-namespace VideoRentalService1
+
+namespace VideoRentalService
 {
     public class Program
     {
@@ -24,35 +26,31 @@ namespace VideoRentalService1
                         ValidateIssuer = true,
                         ValidateAudience = true,
                         ValidateLifetime = true,
-                        ValidateIssuerSigningKey = false,
+                        ValidateIssuerSigningKey = true, 
                         ValidIssuer = "VideoRentalService",
                         ValidAudience = "VideoRentalUsers",
-                        // Custom logic to retrieve the user's signing key
+                        RoleClaimType = ClaimTypes.Role, //  Ustaw weryfikacjê ról
                         IssuerSigningKeyResolver = (token, securityToken, kid, parameters) =>
                         {
                             var tokenHandler = new JwtSecurityTokenHandler();
                             var jwtToken = tokenHandler.ReadJwtToken(token);
-                            Console.WriteLine($"Token {jwtToken.SigningKey}");
-                            // Extract UserId claim from the token
+
                             var userIdClaim = jwtToken.Claims.FirstOrDefault(c => c.Type == "UserId")?.Value;
                             if (string.IsNullOrEmpty(userIdClaim)) throw new SecurityTokenException("Invalid token.");
-                            SymmetricSecurityKey signingKey = AuthorizationController.UserKeys[userIdClaim];
 
-                            // Return the user's signing key
+                            SymmetricSecurityKey signingKey = AuthorizationController.UserKeys[userIdClaim];
                             return new[] { signingKey };
                         }
                     };
 
-                    // Custom logic to reject invalidated tokens
                     options.Events = new JwtBearerEvents
                     {
                         OnMessageReceived = context =>
                         {
-                            // Ensure the token is extracted properly
                             var token = context.Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
                             context.Token = token;
                             return Task.CompletedTask;
-                        },
+                        }
                     };
                 });
 
@@ -90,6 +88,17 @@ namespace VideoRentalService1
 
             });
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll",
+                    policy =>
+                    {
+                        policy.AllowAnyOrigin()
+                              .AllowAnyMethod()
+                              .AllowAnyHeader();
+                    });
+            });
+
             builder.Services.AddControllers();
             builder.Services.AddScoped<MovieService>();
             builder.Services.AddScoped<UserService>();
@@ -117,6 +126,7 @@ namespace VideoRentalService1
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseCors("AllowAll");
 
             app.UseAuthentication(); // Enables JWT token validation
             app.UseAuthorization();

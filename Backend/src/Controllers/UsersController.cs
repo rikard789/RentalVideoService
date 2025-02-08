@@ -18,6 +18,7 @@ namespace VideoRentalService.Controllers
         }
 
         // List all users
+        [Authorize(Roles = "admin")]
         [HttpGet("allUsers")]
         public async Task<ActionResult<List<User>>> GetAllUsers()
         {
@@ -26,6 +27,7 @@ namespace VideoRentalService.Controllers
         }
 
         // Get user by ID
+        //[Authorize(Roles = "admin")]
         [HttpGet("getUser/{id}")]
         public async Task<ActionResult<User>> GetUserById(int id)
         {
@@ -36,6 +38,7 @@ namespace VideoRentalService.Controllers
         }
 
         // Get user by Username
+        //[Authorize(Roles = "admin")]
         [HttpGet("getUserUsername/{username}")]
         public async Task<ActionResult<List<User>>> GetUserByUsername(string username)
         {
@@ -45,15 +48,8 @@ namespace VideoRentalService.Controllers
             return Ok(users);
         }
 
-        // Create a new user
-        [HttpPost("createUser")]
-        public async Task<ActionResult<User>> CreateUser(User user)
-        {
-            var newUser = await _userService.AddUserAsync(user);
-            return CreatedAtAction(nameof(GetUserById), new { id = newUser.UserId }, newUser);
-        }
-
         // Update an existing user by id
+        [Authorize(Roles = "admin")]
         [HttpPut("updateUser/{id}")]
         public async Task<ActionResult<User>> UpdateUser(int id, User updatedUser)
         {
@@ -64,6 +60,7 @@ namespace VideoRentalService.Controllers
         }
 
         // Delete a user by id
+        [Authorize(Roles = "admin")]
         [HttpDelete("deleteUser/{id}")]
         public async Task<ActionResult> DeleteUser(int id)
         {
@@ -71,6 +68,17 @@ namespace VideoRentalService.Controllers
             if (!success) return NotFound($"User with ID {id} not found.");
 
             return NoContent();
+        }
+
+
+
+        // Create a new user
+        [AllowAnonymous]
+        [HttpPost("createUser")]
+        public async Task<ActionResult<User>> CreateUser(User user)
+        {
+            var newUser = await _userService.AddUserAsync(user);
+            return CreatedAtAction(nameof(GetUserById), new { id = newUser.UserId }, newUser);
         }
     }
 }

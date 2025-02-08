@@ -8,34 +8,32 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Background="DarkGray">
-        <Grid Background="CornflowerBlue" Height="100" VerticalAlignment="Top">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="Auto" />
-            </Grid.ColumnDefinitions>
-            <TextBlock Grid.Column="0" Margin="30" FontSize="32" VerticalAlignment="Center">Wypożyczalnia filmów wideo</TextBlock>
-            <Button Click="OnAddProductClick" Grid.Column="1" Content="Dodaj produkt" Width="200" Height="40" Margin="10" />
-            <Button Click="OnLogOutClick" Grid.Column="4" Content="Wyloguj się" Width="100" Height="40" Margin="10" />
-        </Grid>
-        <StackPanel Background="White" VerticalAlignment="Center" Width="800">
-            <TextBlock Text="Zarządzanie produktami" FontSize="32" FontWeight="Bold" Foreground="CornflowerBlue" HorizontalAlignment="Center" Margin="0,20,0,20"/>
-            <TextBlock Text="Nazwa filmu:" Foreground="Black" HorizontalAlignment="Center" Margin="0,20,0,10"/>
-            <TextBox PlaceholderText="np. The Great Movie" Width="300" Height="40" Margin="0,10,0,20" HorizontalAlignment="Center"/>
-            <TextBlock Text="Rodzaj filmu:" Foreground="Black" HorizontalAlignment="Center" Margin="0,20,0,10"/>
-            <ComboBox Width="300" Height="40" Margin="0,10,0,20" HorizontalAlignment="Center">
-                <ComboBoxItem Content="kaseta VHS" />
-                <ComboBoxItem Content="płyta DVD" />
-            </ComboBox>
-            <TextBlock Text="Nazwa użytkownika:" Foreground="Black" HorizontalAlignment="Center" Margin="0,20,0,10"/>
-            <TextBox PlaceholderText="np. user123" Width="300" Height="40" Margin="0,10,0,20" HorizontalAlignment="Center"/>
-            <Button HorizontalAlignment="Center" Background="CornflowerBlue" Content="Sprawdź datę zwrotu" Width="200" Height="40" Margin="0,20,0,20"/>
-            <TextBlock Text="Wartość kary (PLN):" Foreground="Black" HorizontalAlignment="Center" Margin="0,20,0,10"/>
-            <TextBox PlaceholderText="np. 4.99" Width="300" Height="40" Margin="0,10,0,20" HorizontalAlignment="Center"/>
-            <Button HorizontalAlignment="Center" Background="CornflowerBlue" Content="Zgłoś zwrot filmu" Width="200" Height="40" Margin="0,20,0,20"/>
-        </StackPanel>
-    </Grid>
+	<Grid Background="DarkGray">
+		<Grid Background="CornflowerBlue" Height="100" VerticalAlignment="Top">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="Auto" />
+				<ColumnDefinition Width="Auto" />
+				<ColumnDefinition Width="Auto" />
+				<ColumnDefinition Width="Auto" />
+			</Grid.ColumnDefinitions>
+			<TextBlock Grid.Column="0" Margin="30" FontSize="32" VerticalAlignment="Center">Wypożyczalnia filmów wideo</TextBlock>
+			<Button Click="OnAddProductClick" Grid.Column="1" Content="Dodaj produkt" Width="200" Height="40" Margin="10" />
+			<Button Click="OnViewMoviesClick" Grid.Column="2" Content="Zobacz Filmy" Width="200" Height="40" Margin="10" />
+			<Button Click="OnLogOutClick" Grid.Column="4" Content="Wyloguj się" Width="100" Height="40" Margin="10" />
+		</Grid>
+		<StackPanel Background="White" VerticalAlignment="Center" Width="800">
+			<TextBlock Text="Zarządzanie produktami" FontSize="32" FontWeight="Bold" Foreground="CornflowerBlue" HorizontalAlignment="Center" Margin="0,20,0,20"/>
+			<TextBlock Text="ID wypożyczenia:" Foreground="Black" HorizontalAlignment="Center" Margin="0,20,0,10"/>
+			<TextBox x:Name="RentalIdTextBox" PlaceholderText="Wprowadź ID wypożyczenia" Width="300" Height="40" Margin="0,10,0,20" HorizontalAlignment="Center"/>
+			<TextBlock Text="Czy film jest uszkodzony?" Foreground="Black" HorizontalAlignment="Center" Margin="0,20,0,10"/>
+			<ComboBox x:Name="IsDamagedComboBox" Width="300" Height="40" Margin="0,10,0,20" HorizontalAlignment="Center">
+				<ComboBoxItem Content="Tak" />
+				<ComboBoxItem Content="Nie" />
+			</ComboBox>
+			<TextBlock Text="Wartość kary (PLN):" Foreground="Black" HorizontalAlignment="Center" Margin="0,20,0,10"/>
+			<TextBox x:Name="PenaltyTextBox" PlaceholderText="np. 4.99" Width="300" Height="40" Margin="0,10,0,20" HorizontalAlignment="Center"/>
+			<Button HorizontalAlignment="Center" Background="CornflowerBlue" Content="Nalicz karę" Width="200" Height="40" Margin="0,20,0,20" Click="OnSetPenaltyClick"/>
+		</StackPanel>
+	</Grid>
 </Page>
