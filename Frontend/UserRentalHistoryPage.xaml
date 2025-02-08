@@ -8,39 +8,48 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-	<Grid Background="DarkGray">
-		<Grid.RowDefinitions>
-			<RowDefinition Height="Auto" />
-			<RowDefinition Height="Auto" />
-			<RowDefinition Height="*" />
-		</Grid.RowDefinitions>
-		<Grid Grid.Row="0" Background="CornflowerBlue" Height="100" VerticalAlignment="Top">
-			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="*" />
-				<ColumnDefinition Width="Auto" />
-				<ColumnDefinition Width="Auto" />
-				<ColumnDefinition Width="Auto" />
-				<ColumnDefinition Width="Auto" />
-			</Grid.ColumnDefinitions>
-			<TextBlock Margin="30" FontSize="32" VerticalAlignment="Center" Foreground="White">Historia wypożyczeń</TextBlock>
-			<Button Click="OnRentOnlineClick" Grid.Column="2" Content="Wypożycz online" Width="200" Height="40" Margin="10" />
-			<Button Click="OnRentalHistoryClick" Grid.Column="3" Content="Historia wypożyczeń" Width="200" Height="40" Margin="10" />
-			<Button Click="OnLogOutClick" Grid.Column="4" Content="Wyloguj się" Width="100" Height="40" Margin="10" />
-		</Grid>
-		
-		<Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,150,0,0">
-			<StackPanel Background="White" Width="800" Padding="40" CornerRadius="10" HorizontalAlignment="Center">
-
-				<TextBlock x:Name="WelcomeText" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="24" Margin="0,10,0,20"/>
-
-				<ListView x:Name="RentalsListView">
-					<ListView.ItemTemplate>
-						<DataTemplate>
-
-						</DataTemplate>
-					</ListView.ItemTemplate>
-				</ListView>
-			</StackPanel>
-		</Grid>
-	</Grid>
+    <Grid Background="DarkGray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid Background="CornflowerBlue" Height="100" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Margin="30" FontSize="32" VerticalAlignment="Center">Wypożyczalnia filmów wideo</TextBlock>
+            <Button Click="OnRentOnlineClick" Grid.Column="3" Content="Wypożycz film" Width="200" Height="40" Margin="10" />
+            <Button Click="OnLogOutClick" Grid.Column="4" Content="Wyloguj się" Width="100" Height="40" Margin="10" />
+        </Grid>
+        <Grid Grid.Row="1" Background="White" Height="75" VerticalAlignment="Top">
+            <TextBlock Foreground="Black" Grid.Column="0" Margin="30,0,0,0" FontSize="24" VerticalAlignment="Center">Historia wypożyczeń</TextBlock>
+        </Grid>
+        <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled">
+            <ListView x:Name="RentalListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Background="White" Margin="20" Height="100">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="500" />
+                                <ColumnDefinition Width="170" />
+                                <ColumnDefinition Width="300" />
+                                <ColumnDefinition Width="250" />
+                                <ColumnDefinition Width="160" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock FontSize="32" Margin="20" VerticalAlignment="Center" Grid.Column="0" Text="{Binding MovieTitle}" Foreground="Black"/>
+                            <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="1" Text="{Binding MovieType}" Foreground="Black"/>
+                            <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="2" Text="{Binding RentalDate}" Foreground="Black" />
+                            <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="4" Text="{Binding ReturnDate}" Foreground="Black" />
+                            <TextBlock FontSize="18" Margin="20" VerticalAlignment="Center" Grid.Column="5" Text="{Binding Penalty}" Foreground="Black" />
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollViewer>
+    </Grid>
 </Page>

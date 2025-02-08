@@ -101,7 +101,14 @@ namespace Frontend
 
         private async Task ShowMessage(string message)
         {
-            var dialog = new MessageDialog(message);
+            var dialog = new ContentDialog
+            {
+                Title = "Informacja",
+                Content = message,
+                CloseButtonText = "OK",
+                DefaultButton = ContentDialogButton.Close
+            };
+
             await dialog.ShowAsync();
         }
 

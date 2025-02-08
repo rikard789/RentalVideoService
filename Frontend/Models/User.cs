@@ -23,8 +23,6 @@ namespace Frontend.Models
         // Czas ostatniej aktualizacji konta
         public DateTime UpdateTime { get; set; }
 
-        // Kolekcja wypożyczeń powiązana z użytkownikiem
-        public List<Rental> Rentals { get; set; } // A user can have many rentals
     }
 
 

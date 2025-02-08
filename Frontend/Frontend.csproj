@@ -132,7 +132,9 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Services\RentalService.cs" />
+    <Compile Include="Models\Rental.cs" />
+    <Compile Include="Models\TokenResponse.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="SignInPage.xaml.cs">
       <DependentUpon>SignInPage.xaml</DependentUpon>
     </Compile>
@@ -145,13 +147,12 @@
     <Compile Include="UserRentalHistoryPage.xaml.cs">
       <DependentUpon>UserRentalHistoryPage.xaml</DependentUpon>
     </Compile>
-	<Compile Include="MovieListPage.xaml.cs">
-		<DependentUpon>MovieListPage.xaml</DependentUpon>
+    <Compile Include="MovieListPage.xaml.cs">
+      <DependentUpon>MovieListPage.xaml</DependentUpon>
     </Compile>
-	<Compile Include="EditMoviePage.xaml.cs">
-		<DependentUpon>EditMoviePage.xaml</DependentUpon>
-	</Compile>
-    <Compile Include="ViewModels\RentalViewModel.cs" />
+    <Compile Include="EditMoviePage.xaml.cs">
+      <DependentUpon>EditMoviePage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -184,14 +185,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-	<Page Include="EditMoviePage.xaml">
+    <Page Include="EditMoviePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-	<Page Include="MovieListPage.xaml">
-	    <SubType>Designer</SubType>
-		<Generator>MSBuild:Compile</Generator>
-	</Page>
+    <Page Include="MovieListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -219,6 +220,9 @@
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>13.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt">
+      <Version>8.4.0</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
